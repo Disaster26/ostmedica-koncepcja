@@ -444,3 +444,7 @@ svg use{pointer-events:none}
   .katalog{grid-template-columns:minmax(0,1fr)}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+.emg-aparat{margin:22px 0 4px;padding:16px 18px;border-left:3px solid var(--granat);background:var(--tlo-jasne);border-radius:8px}
+.emg-aparat h3{margin:0 0 6px;font-size:18px;color:var(--granat-ciemny)}
+.emg-aparat p{margin:0}
