@@ -15,7 +15,7 @@
 
   // aktywna pozycja menu (dokladnie biezacy dzial)
   var linki=[].slice.call(document.querySelectorAll('.menu a'));
-  var linkiPanel=[].slice.call(panel.querySelectorAll('nav a'));
+  var linkiPanel=[].slice.call(panel.querySelectorAll('nav a:not(.pod)'));
   var sekcje=linki.map(function(a){return document.querySelector(a.getAttribute('href'));});
   function aktywny(){
     var y=window.scrollY+window.innerHeight*0.35, akt=-1;

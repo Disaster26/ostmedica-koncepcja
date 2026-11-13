@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 <link rel="preload" as="image" href="img/sala-chirurgiczno-zabiegowa.webp">
 </head>
 <body>
@@ -65,6 +65,7 @@
       <a href="#usg">USG</a>
       <a href="#emg">EMG</a>
       <a href="#zabiegi">Zabiegi</a>
+      <a class="pod" href="#kriochirurgia">Kriochirurgia dermatologiczna</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
     <p class="panel-adres">ul. Dr. L. Rutkowskiego 6, 09-100 Płońsk<br>Rejestracja: <a href="tel:+48731100801">731 100 801</a></p>
@@ -102,7 +103,7 @@
       <div class="spec"><h3>Chirurgia ogólna i naczyniowa</h3><ul><li>dr n. med. Krzysztof Ostrowski</li><li>lek. Svitlana Korobova <em>nowy gabinet</em></li><li>lek. Henryk Mazgaj</li></ul></div>
       <div class="spec"><h3>Poradnia leczenia bólu, neurochirurgia</h3><ul><li>lek. Bartosz Czapski</li></ul></div>
       <div class="spec"><h3>Osteoporoza i choroby metaboliczne kości</h3><ul><li>lek. Jacek Borowicz</li></ul></div>
-      <div class="spec"><h3>Dermatologia i wenerologia</h3><ul><li>lek. Justyna Śliwiak-Chmura</li><li>lek. Łukasz Pacek</li></ul></div>
+      <div class="spec"><h3>Dermatologia i wenerologia</h3><ul><li>lek. Justyna Śliwiak-Chmura</li><li>lek. Łukasz Pacek</li></ul><a class="spec-link" href="#kriochirurgia">Kriochirurgia dermatologiczna</a></div>
       <div class="spec"><h3>Laryngologia, chirurgia głowy i szyi</h3><ul><li>dr n. med. Rafał Brzeziński</li></ul></div>
       <div class="spec"><h3>Neurologia</h3><ul><li>lek. Aleksandra Dumowska-Tucholska</li><li>lek. Milena Wyszczelska-Namięta</li></ul></div>
       <div class="spec"><h3>Neurologia dziecięca</h3><ul><li>lek. Magdalena Ogrodnik <em>nowy gabinet</em></li></ul></div>
@@ -322,9 +323,9 @@
       <article class="zabieg">
         <div class="zabieg-foto na-bieli"><img src="img/kriochirurgia.webp" alt="Aparat do kriochirurgii CRYO-S Classic" width="178" height="538" loading="lazy"></div>
         <div class="zabieg-tekst">
-          <h3>Dermatochirurgia: kriochirurgia</h3>
-          <p>Kriochirurgia to złoty standard w dermatologii. Zabieg w większości przypadków nie wymaga znieczulenia i pozwala uzyskać dobre efekty kosmetyczne. Aparat Cryo-S Classic.</p>
-          <p><a class="link-strzalka" href="#dermatochirurgia">Zastosowanie i opis zabiegu</a></p>
+          <h3>Kriochirurgia dermatologiczna</h3>
+          <p>Zamrażanie kurzajek, włókniaków, brodawek łojotokowych i ognisk rogowacenia. Kilka minut w gabinecie, zwykle bez znieczulenia. Aparat Cryo-S Classic.</p>
+          <p><a class="link-strzalka" href="#kriochirurgia">Jak wygląda zabieg i co leczymy</a></p>
           <p class="zabieg-kto">lek. Justyna Śliwiak-Chmura; lek. Łukasz Pacek</p>
         </div>
       </article>
@@ -351,29 +352,157 @@
       </article>
     </div>
 
-    <div class="derma" id="dermatochirurgia">
-      <div class="derma-tekst">
-        <h3>Dermatochirurgia</h3>
-        <p class="duzy">Kriochirurgia to złoty standard w dermatologii, a aparaty serii Cryo-S są najpowszechniej używanymi w Polsce i na świecie. Zabieg w większości przypadków nie wymaga znieczulenia.</p>
-        <p>Po zamrożeniu zniszczone tkanki ulegają samoistnej demarkacji, a następnie tkanka ulega prawidłowej odbudowie bez zwłóknień lub ubytków. Powstała blizna jest elastyczna, bezkolagenowa. Zabieg kriochirurgii pozwala na uzyskanie dobrych efektów kosmetycznych, trudnych do osiągnięcia innymi metodami.</p>
-        <p>W dermatologii najczęściej i najbardziej widowiskowo manifestuje się spotykane po zabiegach kriochirurgicznych zjawisko swoistej odpowiedzi autoimmunologicznej: po kilku tygodniach zmniejszają się lub całkowicie zanikają odległe zmiany tego samego typu na skórze. Efekt ten spowodowany jest niszczeniem struktur komórkowych bez zmian w budowie chemicznej ich składników. Po lasero- lub elektrokoagulacji białka, tłuszcze i inne składniki budulcowe ulegają tak dużym przemianom chemicznym, że nie mogą stanowić wzorca antygenowego przydatnego do stymulacji produkcji swoistych dla zmian chorobowych przeciwciał.</p>
+    <div class="krio" id="kriochirurgia" aria-labelledby="h-krio">
+      <div class="krio-baner">
+        <div class="krio-baner-tekst">
+          <h3 id="h-krio" class="krio-tytul">Kriochirurgia dermatologiczna</h3>
+          <p class="krio-lead">Leczenie zmian skórnych zimnem: kurzajki, włókniaki, brodawki łojotokowe, rogowacenie. Zabieg trwa kilka minut, odbywa się w gabinecie i zwykle nie wymaga znieczulenia ani cięcia.</p>
+          <div class="krio-akcje">
+            <a class="btn btn-glowny krio-btn" href="tel:+48731100801"><svg aria-hidden="true"><use href="#ikona-tel"/></svg>Umów konsultację: 731 100 801</a>
+          </div>
+          <p class="krio-kto">Zabiegi wykonują lekarze dermatolodzy: <b>lek. Justyna Śliwiak-Chmura</b> i&nbsp;<b>lek. Łukasz Pacek</b></p>
+        </div>
+        <figure class="krio-ilustracja">
+          <svg class="krio-svg" viewBox="0 0 600 420" role="img" aria-labelledby="krio-svg-t" xmlns="http://www.w3.org/2000/svg">
+            <title id="krio-svg-t">Schemat zabiegu: końcówka krioaplikatora zamraża zmianę na skórze, pod zmianą zaznaczona strefa zamrożenia</title>
+            <defs>
+              <linearGradient id="krio-zloto" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFC266"/><stop offset="1" stop-color="#EE8023"/></linearGradient>
+              <linearGradient id="krio-strumien" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity=".08"/></linearGradient>
+              <radialGradient id="krio-lod" cx=".5" cy="0" r="1"><stop offset="0" stop-color="#D6E6FF" stop-opacity=".55"/><stop offset="1" stop-color="#D6E6FF" stop-opacity="0"/></radialGradient>
+              <g id="krio-ramie" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+                <path d="M0 -6V-34M0 -18l-8 -8M0 -18l8 -8"/>
+                <circle cx="-3.2" cy="-37" r="3.4"/><circle cx="3.2" cy="-37" r="3.4"/>
+              </g>
+              <g id="krio-platek">
+                <use href="#krio-ramie"/><use href="#krio-ramie" transform="rotate(60)"/><use href="#krio-ramie" transform="rotate(120)"/>
+                <use href="#krio-ramie" transform="rotate(180)"/><use href="#krio-ramie" transform="rotate(240)"/><use href="#krio-ramie" transform="rotate(300)"/>
+              </g>
+            </defs>
+
+            <!-- duzy platek sniegu z ramionami zakonczonymi jak kosc z logo -->
+            <g color="#fff" opacity=".13" transform="translate(130 120) scale(2.1)"><use href="#krio-platek"/></g>
+
+            <!-- skora w przekroju -->
+            <path d="M0 304C120 296 220 300 300 300S480 306 600 300V420H0Z" fill="#fff" fill-opacity=".07"/>
+            <path d="M0 304C120 296 220 300 300 300S480 306 600 300V330C480 336 380 330 300 330S120 326 0 334Z" fill="#fff" fill-opacity=".13"/>
+            <path d="M0 334C120 326 220 330 300 330S480 336 600 330" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="1.5" stroke-dasharray="2 7" stroke-linecap="round"/>
+            <g fill="#fff" fill-opacity=".14">
+              <circle cx="40" cy="362" r="4"/><circle cx="92" cy="388" r="3"/><circle cx="150" cy="356" r="3.5"/><circle cx="196" cy="400" r="4"/>
+              <circle cx="430" cy="398" r="3.5"/><circle cx="472" cy="360" r="4"/><circle cx="528" cy="392" r="3"/><circle cx="572" cy="356" r="3.5"/>
+            </g>
+
+            <!-- strefa zamrozenia pod zmiana -->
+            <path d="M206 300A94 82 0 0 0 394 300Z" fill="url(#krio-lod)"/>
+            <g fill="none" stroke="#D6E6FF" stroke-linecap="round">
+              <path d="M232 300A68 58 0 0 0 368 300" stroke-width="2.5" stroke-opacity=".9"/>
+              <path d="M206 300A94 82 0 0 0 394 300" stroke-width="2" stroke-opacity=".55" stroke-dasharray="3 8"/>
+            </g>
+
+            <!-- zmiana skorna -->
+            <path d="M258 301C262 276 280 266 300 266S338 276 342 301Z" fill="#E4E9F5"/>
+            <path d="M276 290c4-8 10-10 14-4M296 284c4-9 12-10 16-2M314 293c3-6 8-7 11-2" fill="none" stroke="#2C4290" stroke-opacity=".45" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M0 304C120 296 220 300 300 300S480 306 600 300" fill="none" stroke="#fff" stroke-width="3"/>
+
+            <!-- strumien chlodu -->
+            <path d="M344 186L268 262Q300 250 330 268Z" fill="url(#krio-strumien)" opacity=".75"/>
+            <g fill="#fff">
+              <circle cx="316" cy="226" r="2.6"/><circle cx="300" cy="244" r="2"/><circle cx="330" cy="236" r="2.2"/><circle cx="288" cy="256" r="1.8"/><circle cx="322" cy="252" r="1.6"/>
+            </g>
+            <g color="#fff"><use href="#krio-platek" transform="translate(248 214) scale(.3)"/><use href="#krio-platek" transform="translate(372 250) scale(.24)" opacity=".8"/><use href="#krio-platek" transform="translate(226 236) scale(.18)" opacity=".7"/></g>
+
+            <!-- krioaplikator -->
+            <g transform="translate(346 182) rotate(-38)">
+              <path d="M0 0L36 -6.5V6.5Z" fill="url(#krio-zloto)" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+              <rect x="34" y="-5" width="84" height="10" rx="3" fill="#E7ECF5"/>
+              <rect x="116" y="-12" width="14" height="24" rx="4" fill="#EE8023"/>
+              <rect x="128" y="-20" width="132" height="40" rx="20" fill="#F7F9FC"/>
+              <path d="M170 -20V20M184 -20V20M198 -20V20" stroke="#2C4290" stroke-opacity=".18" stroke-width="3"/>
+              <circle cx="150" cy="0" r="7.5" fill="#2C4290"/>
+              <rect x="254" y="-9" width="24" height="18" rx="5" fill="#C9D2E6"/>
+            </g>
+
+            <!-- opisy -->
+            <g font-family="Nunito Sans, system-ui, sans-serif" font-size="19" font-weight="700" fill="#fff">
+              <path d="M118 270H212L256 288" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.5"/>
+              <text x="22" y="264">zmiana skórna</text>
+              <path d="M386 352L430 384H494" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.5"/>
+              <text x="388" y="408">strefa zamrożenia</text>
+              <path d="M446 132L486 160H566" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.5"/>
+              <text x="578" y="186" text-anchor="end">krioaplikator</text>
+            </g>
+          </svg>
+        </figure>
       </div>
-      <div class="derma-bok">
-        <h4>Zastosowanie</h4>
-        <ul class="lista-kosc">
-          <li>brodawki zwykłe, tzw. kurzajki, brodawki płaskie oraz brodawki łojotokowe</li>
-          <li>włókniaki</li>
-          <li>niektóre znamiona, odciski, blizny, zwłaszcza przerosłe, zwłókniałe i nieregularne</li>
-          <li>zmiany naczyniowe: naczyniaki, rozszerzone naczynia krwionośne</li>
-          <li>zmiany trądzikowe, łysienie plackowate (kriostymulacja)</li>
-          <li>zmiany nowotworowe</li>
-        </ul>
-        <div class="derma-aparat">
-          <h4>Cryo-S Classic: aparat do kriochirurgii</h4>
-          <p>Przeznaczony jest do miejscowego, szybkiego zamrażania zmian patologicznych za pomocą krioaplikatora natryskowego lub z użyciem sond kontaktowych. Krioaplikatory natryskowe, sondy SD10 lub SG10 posiadają możliwość płynnej regulacji wielkości strumienia i mocy chłodniczej. Ta funkcja pozwala na zamrażanie zmian od bardzo małych, o kilku milimetrach sześciennych objętości, do zmian dużo większych, do kilkudziesięciu centymetrów sześciennych.</p>
-          <p><b>Bezpieczny i ergonomiczny uchwyt z krioaplikatorem.</b> Aparat Cryo-S jest urządzeniem nieelektrycznym, sterowanie pracą odbywa się w układzie pneumatycznym. Strefa mrożąca krioaplikatora jest oznaczona przez pokrycie jej 24-karatowym, twardym złotem. Pozostała jego część aż po rękojeść jest ciepła, bezpieczna dla tkanki i umożliwia operowanie wewnątrz jam ciała. Aparat jest zgodny z wymaganiami dyrektywy MDD 93/42/EEC i posiada znak CE 0044.</p>
+
+      <div class="krio-dwie">
+        <div class="krio-blok">
+          <h4>Na czym polega zabieg</h4>
+          <p>Lekarz punktowo zamraża zmianę na skórze. Czynnik chłodzący płynie z krioaplikatora: jako cienki strumień albo przez przyłożoną do zmiany sondę. Zamrożone komórki obumierają, a w ciągu kolejnych tygodni zmiana złuszcza się i w jej miejscu odbudowuje się zdrowa skóra.</p>
+          <p>W Ostmedice zabiegi wykonujemy aparatem Cryo-S Classic, który pozwala dopasować siłę zamrażania do wielkości zmiany: od kilkumilimetrowych grudek po większe ogniska.</p>
+        </div>
+        <div class="krio-blok">
+          <h4>Co można leczyć zimnem</h4>
+          <ul class="lista-kosc">
+            <li>brodawki wirusowe (kurzajki), także na dłoniach i stopach, oraz brodawki płaskie</li>
+            <li>brodawki łojotokowe</li>
+            <li>włókniaki miękkie</li>
+            <li>rogowacenie słoneczne</li>
+            <li>wybrane łagodne zmiany naczyniowe i blizny przerosłe</li>
+          </ul>
+          <p class="krio-uwaga">Nie każda zmiana nadaje się do zamrożenia. Znamiona barwnikowe zawsze najpierw ocenia dermatolog. Zmianę budzącą wątpliwości lekarz kieruje raczej do usunięcia chirurgicznego i badania histopatologicznego.</p>
         </div>
       </div>
+
+      <h4 class="krio-podtytul">Jak wygląda zabieg</h4>
+      <ol class="krio-kroki">
+        <li><b>Konsultacja</b><span>Dermatolog ogląda zmianę, decyduje, czy kriochirurgia jest dobrą metodą, i omawia przebieg leczenia.</span></li>
+        <li><b>Zamrażanie</b><span>Od kilku do kilkunastu sekund na zmianę, czasem w dwóch cyklach. Czuć zimno i pieczenie, które szybko mija.</span></li>
+        <li><b>Pierwsze dni</b><span>Miejsce zabiegu się zaczerwienia, może pojawić się obrzęk lub pęcherz. To zwykła reakcja skóry na zamrożenie.</span></li>
+        <li><b>Gojenie</b><span>Strupek odpada sam, zwykle po 1-3 tygodniach. Uparte brodawki bywa trzeba zamrozić ponownie po kilku tygodniach.</span></li>
+      </ol>
+
+      <div class="krio-dwie krio-zalecenia">
+        <div class="krio-blok">
+          <h4>Przygotowanie</h4>
+          <ul class="lista-kosc">
+            <li>zabieg nie wymaga specjalnego przygotowania</li>
+            <li>w dniu zabiegu nie nakładaj kremów ani makijażu na leczone miejsce</li>
+            <li>powiedz lekarzowi o przyjmowanych lekach (zwłaszcza przeciwkrzepliwych), o ciąży i o chorobach, w których źle znosisz zimno</li>
+          </ul>
+        </div>
+        <div class="krio-blok">
+          <h4>Po zabiegu</h4>
+          <ul class="lista-kosc">
+            <li>nie przekłuwaj pęcherza i nie zrywaj strupka</li>
+            <li>myj miejsce delikatnie, osuszaj i stosuj środki zalecone przez lekarza</li>
+            <li>do zagojenia unikaj basenu i sauny</li>
+            <li>chroń skórę przed słońcem kremem z filtrem przez kilka tygodni</li>
+            <li>zadzwoń do nas, jeśli ból narasta, pojawi się ropa lub gorączka</li>
+          </ul>
+        </div>
+      </div>
+
+      <details class="krio-wiecej">
+        <summary>Więcej o metodzie i aparacie Cryo-S Classic</summary>
+        <div class="krio-wiecej-in">
+          <p>Kriochirurgia to złoty standard w dermatologii, a aparaty serii Cryo-S są najpowszechniej używanymi w Polsce i na świecie. Po zamrożeniu zniszczone tkanki ulegają samoistnej demarkacji, a następnie tkanka ulega prawidłowej odbudowie bez zwłóknień lub ubytków. Powstała blizna jest elastyczna, bezkolagenowa. Zabieg kriochirurgii pozwala na uzyskanie dobrych efektów kosmetycznych, trudnych do osiągnięcia innymi metodami.</p>
+          <p>W dermatologii najczęściej i najbardziej widowiskowo manifestuje się spotykane po zabiegach kriochirurgicznych zjawisko swoistej odpowiedzi autoimmunologicznej: po kilku tygodniach zmniejszają się lub całkowicie zanikają odległe zmiany tego samego typu na skórze. Efekt ten spowodowany jest niszczeniem struktur komórkowych bez zmian w budowie chemicznej ich składników. Po lasero- lub elektrokoagulacji białka, tłuszcze i inne składniki budulcowe ulegają tak dużym przemianom chemicznym, że nie mogą stanowić wzorca antygenowego przydatnego do stymulacji produkcji swoistych dla zmian chorobowych przeciwciał.</p>
+          <p><b>Zastosowanie wg materiałów gabinetu:</b> brodawki zwykłe (kurzajki), płaskie i łojotokowe; włókniaki; niektóre znamiona, odciski, blizny, zwłaszcza przerosłe, zwłókniałe i nieregularne; zmiany naczyniowe: naczyniaki, rozszerzone naczynia krwionośne; zmiany trądzikowe, łysienie plackowate (kriostymulacja); zmiany nowotworowe.</p>
+          <div class="krio-aparat">
+            <img src="img/kriochirurgia.webp" alt="Aparat do kriochirurgii Cryo-S Classic" width="178" height="538" loading="lazy">
+            <div>
+              <p><b>Cryo-S Classic: aparat do kriochirurgii.</b> Przeznaczony jest do miejscowego, szybkiego zamrażania zmian patologicznych za pomocą krioaplikatora natryskowego lub z użyciem sond kontaktowych. Krioaplikatory natryskowe, sondy SD10 lub SG10 posiadają możliwość płynnej regulacji wielkości strumienia i mocy chłodniczej. Ta funkcja pozwala na zamrażanie zmian od bardzo małych, o kilku milimetrach sześciennych objętości, do zmian dużo większych, do kilkudziesięciu centymetrów sześciennych.</p>
+              <p><b>Bezpieczny i ergonomiczny uchwyt z krioaplikatorem.</b> Aparat Cryo-S jest urządzeniem nieelektrycznym, sterowanie pracą odbywa się w układzie pneumatycznym. Strefa mrożąca krioaplikatora jest oznaczona przez pokrycie jej 24-karatowym, twardym złotem. Pozostała jego część aż po rękojeść jest ciepła, bezpieczna dla tkanki i umożliwia operowanie wewnątrz jam ciała. Aparat jest zgodny z wymaganiami dyrektywy MDD 93/42/EEC i posiada znak CE 0044.</p>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <div class="krio-cta">
+        <p><b>Masz zmianę, która Cię niepokoi albo nie znika?</b> Umów wizytę u dermatologa. Lekarz oceni ją i dobierze metodę leczenia, także gdy kriochirurgia nie będzie najlepszym wyborem.</p>
+        <a class="btn btn-glowny" href="tel:+48731100801"><svg aria-hidden="true"><use href="#ikona-tel"/></svg>Rejestracja: 731 100 801</a>
+      </div>
+      <p class="krio-zastrzezenie">Informacje mają charakter ogólny i nie zastępują porady lekarskiej. O kwalifikacji do zabiegu i zaleceniach decyduje lekarz.</p>
     </div>
   </div>
 </section>
@@ -420,7 +549,7 @@
       <p>ul. Dr. L. Rutkowskiego 6<br>09-100 Płońsk<br><a href="tel:+48731100801">731 100 801</a><br><a href="mailto:rejestracja@ostmedica.pl">rejestracja@ostmedica.pl</a></p>
     </div>
     <nav class="stopka-menu" aria-label="Działy">
-      <a href="#poradnie">Poradnie i gabinety</a><a href="#fizjoterapia">Fizjoterapia</a><a href="#densytometria">Densytometria</a><a href="#usg">USG</a><a href="#emg">EMG</a><a href="#zabiegi">Zabiegi</a>
+      <a href="#poradnie">Poradnie i gabinety</a><a href="#fizjoterapia">Fizjoterapia</a><a href="#densytometria">Densytometria</a><a href="#usg">USG</a><a href="#emg">EMG</a><a href="#zabiegi">Zabiegi</a><a href="#kriochirurgia">Kriochirurgia</a>
     </nav>
     <nav class="stopka-menu" aria-label="Informacje">
       <a href="#kontakt">Kontakt</a><a href="polityka-prywatnosci.html">Polityka prywatności</a><a href="#" data-cookies-ustawienia>Ustawienia cookies</a>
@@ -465,6 +594,6 @@
   </div>
 </div>
 
-<script src="app.js?v=3" defer></script>
+<script src="app.js?v=4" defer></script>
 </body>
 </html>

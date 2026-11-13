@@ -196,14 +196,6 @@ svg use{pointer-events:none}
 .link-strzalka{font-weight:700;text-decoration:none;display:inline-flex;gap:6px;align-items:center}
 .link-strzalka::after{content:"↓";color:var(--pomarancz)}
 .link-strzalka:hover{text-decoration:underline}
-.derma{margin-top:28px;background:#fff;border-radius:var(--r);padding:40px 44px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:44px;box-shadow:0 1px 0 var(--linia),0 10px 30px rgba(31,47,107,.06);scroll-margin-top:calc(var(--naglowek) + 16px)}
-.derma h3{font-size:26px}
-.derma-tekst p{color:#3A4458}
-.derma-tekst .duzy{color:#2C3550}
-.derma-bok h4{font-size:18px;margin-bottom:12px}
-.derma-bok .lista-kosc li{font-size:16px}
-.derma-aparat{background:var(--tlo-jasne);border-radius:10px;padding:22px 22px 8px;border-top:3px solid var(--granat)}
-.derma-aparat p{font-size:15px;color:#3A4458;line-height:1.55}
 .zabieg-foto.karuzela{overflow:hidden}
 .zabieg-foto .karuzela-tor{height:100%;border-radius:0}
 .zabieg-foto .karuzela-tor figure{aspect-ratio:auto;height:100%}
@@ -221,6 +213,75 @@ svg use{pointer-events:none}
 .zabieg-tekst h3{font-size:20px}
 .zabieg-tekst p{color:#3A4458;font-size:16px}
 .zabieg-kto{margin:auto 0 0!important;padding-top:12px;border-top:1px solid var(--linia);font-size:14.5px!important;font-weight:700;color:var(--granat)!important}
+
+/* kriochirurgia dermatologiczna */
+.spec-link{display:inline-block;margin-top:6px;font-size:14.5px;font-weight:700;text-decoration:none;color:var(--pomarancz-ciemny)}
+.spec-link::after{content:" 93"}
+.spec-link:hover{text-decoration:underline}
+.panel nav a.pod{font-size:16.5px;font-weight:700;color:var(--granat);padding:10px 0 10px 18px;position:relative}
+.panel nav a.pod::before{content:"";position:absolute;left:2px;top:50%;width:9px;height:2px;background:var(--pomarancz)}
+.krio{margin-top:28px;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 1px 0 var(--linia),0 10px 30px rgba(31,47,107,.06);scroll-margin-top:calc(var(--naglowek) + 16px)}
+.krio-baner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);align-items:center;gap:20px;background:linear-gradient(120deg,var(--granat-ciemny) 0,var(--granat) 100%);color:#E6EBF8;padding:48px 0 0 52px;position:relative}
+.krio-baner-tekst{padding-bottom:48px}
+.krio-tytul{font-size:clamp(30px,3vw,44px);font-weight:900;color:#fff;margin-bottom:16px}
+.krio-tytul::after{content:"";display:block;width:64px;height:4px;border-radius:2px;background:var(--pomarancz);margin-top:16px}
+.krio-lead{font-size:clamp(17px,1.3vw,19px);color:#fff;max-width:32em;margin-bottom:26px}
+.krio-akcje{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:22px}
+.krio-kto{margin:0;font-size:15px;color:#C9D2EE;max-width:32em}
+.krio-kto b{color:#fff;font-weight:700}
+.krio-ilustracja{margin:0;align-self:end}
+.krio-svg{display:block;width:100%;height:auto}
+.krio-dwie{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:44px;padding:44px 52px 0}
+.krio-blok h4{font-size:20px;margin-bottom:12px}
+.krio-blok p{color:#3A4458}
+.krio-blok .lista-kosc li{font-size:16px;color:#2C3550}
+.krio-uwaga{font-size:15px;background:var(--tlo-jasne);border-left:4px solid var(--pomarancz);border-radius:0 8px 8px 0;padding:12px 16px;margin:0}
+.krio-podtytul{font-size:20px;margin:44px 52px 16px}
+.krio-kroki{list-style:none;margin:0 52px;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;counter-reset:krok}
+.krio-kroki li{counter-increment:krok;background:var(--tlo-jasne);border-radius:10px;padding:18px 18px 20px;border-top:3px solid var(--granat)}
+.krio-kroki li::before{content:counter(krok);display:block;font-family:var(--f-nag);font-weight:900;font-size:34px;line-height:1;color:var(--pomarancz);margin-bottom:10px}
+.krio-kroki b{display:block;font-family:var(--f-nag);font-weight:800;color:var(--granat-ciemny);font-size:17px;margin-bottom:6px}
+.krio-kroki span{display:block;font-size:15px;color:#3A4458;line-height:1.5}
+.krio-zalecenia{padding-top:40px}
+.krio-wiecej{margin:28px 52px 0;border-top:1px solid var(--linia);border-bottom:1px solid var(--linia)}
+.krio-wiecej summary{cursor:pointer;font-family:var(--f-nag);font-weight:800;color:var(--granat);padding:16px 0;font-size:17px}
+.krio-wiecej-in{padding:4px 0 18px}
+.krio-wiecej-in p{color:#3A4458;font-size:15.5px}
+.krio-aparat{display:grid;grid-template-columns:90px minmax(0,1fr);gap:22px;align-items:start;background:var(--tlo-jasne);border-radius:10px;padding:18px 20px 4px;border-top:3px solid var(--granat)}
+.krio-aparat img{width:90px;height:auto;mix-blend-mode:multiply}
+.krio-cta{display:flex;align-items:center;justify-content:space-between;gap:20px 36px;margin:32px 52px 0;padding:24px 28px;background:var(--tlo-jasne);border-radius:10px}
+.krio-cta p{margin:0;color:#2C3550;max-width:46em}
+.krio-cta b{color:var(--granat-ciemny)}
+.krio-cta .btn{flex:none}
+.krio-btn{white-space:nowrap}
+.krio-zastrzezenie{margin:16px 52px 0;padding-bottom:36px;font-size:13.5px;color:var(--szary)}
+@media (max-width:1040px){
+  .krio-baner{grid-template-columns:minmax(0,1fr);padding:40px 36px 0}
+  .krio-baner-tekst{padding-bottom:0}
+  .krio-ilustracja{width:calc(100% + 72px);margin:0 -36px}
+  .krio-dwie{gap:32px;padding:36px 36px 0}
+  .krio-podtytul,.krio-wiecej,.krio-cta,.krio-zastrzezenie{margin-left:36px;margin-right:36px}
+  .krio-kroki{margin:0 36px;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .krio-zalecenia{padding-top:32px}
+}
+@media (max-width:760px){
+  .krio{margin-top:18px}
+  .krio-baner{padding:30px 18px 0}
+  .krio-tytul{font-size:clamp(26px,7.2vw,32px)}
+  .krio-lead{font-size:16.5px}
+  .krio-akcje .btn{width:100%;white-space:nowrap;padding:0 12px;font-size:16px}
+  .krio-ilustracja{width:calc(100% + 36px);margin:0 -18px}
+  .krio-dwie{grid-template-columns:minmax(0,1fr);gap:28px;padding:28px 18px 0}
+  .krio-podtytul{margin:32px 18px 12px}
+  .krio-kroki{margin:0 18px;grid-template-columns:minmax(0,1fr);gap:10px}
+  .krio-kroki li{display:grid;grid-template-columns:34px minmax(0,1fr);column-gap:12px;padding:14px 16px}
+  .krio-kroki li::before{grid-row:1/3;font-size:28px;margin:0}
+  .krio-wiecej{margin:24px 18px 0}
+  .krio-aparat{grid-template-columns:minmax(0,1fr);padding:16px 16px 2px}
+  .krio-aparat img{width:70px}
+  .krio-cta{flex-direction:column;align-items:stretch;margin:24px 18px 0;padding:20px 18px}
+  .krio-zastrzezenie{margin:14px 18px 0;padding-bottom:26px}
+}
 
 /* 7. kontakt */
 .kontakt{background:#fff}
@@ -299,7 +360,6 @@ svg use{pointer-events:none}
 }
 @media (max-width:1040px){
   .zabiegi-siatka{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .derma{grid-template-columns:minmax(0,1fr);gap:24px;padding:32px 30px}
 }
 @media (max-width:960px){
   .densy-siatka,.usg-siatka,.kontakt-siatka,.fizjo-gora,.emg-siatka{grid-template-columns:minmax(0,1fr);gap:40px}
@@ -361,8 +421,6 @@ svg use{pointer-events:none}
   .emg-lekarze{grid-template-columns:minmax(0,1fr)}
   .emg-foto{padding:24px}
   .zabiegi-siatka{grid-template-columns:minmax(0,1fr);gap:18px}
-  .derma{padding:24px 18px;margin-top:18px}
-  .derma h3{font-size:23px}
   .typo-liczba{font-size:56px}
   .mapa{min-height:360px}
   .mapa-ramka{min-height:320px}
