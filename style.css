@@ -105,7 +105,7 @@ svg use{pointer-events:none}
 .fizjo-wstep h3{margin-top:1.3em}
 .pomoc li{font-size:16px}
 .fizjo-galeria{position:sticky;top:calc(var(--wiersz) + 24px)}
-.fizjo-galeria .karuzela-tor figure{aspect-ratio:3/2}
+.fizjo-galeria .karuzela-tor figure{aspect-ratio:4/3}
 .fizjo-podtytul{margin:72px 0 18px;font-size:clamp(22px,2vw,28px);font-weight:900}
 .zabiegi-fizjo{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;outline:none}
 .zabiegi-fizjo article{background:var(--tlo-jasne);border-radius:var(--r);padding:20px 18px 18px;border-top:3px solid var(--granat)}
