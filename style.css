@@ -1,46 +1,52 @@
 :root{
   --granat:#2C4290; --granat-ciemny:#1F2F6B; --pomarancz:#EE8023; --pomarancz-ciemny:#D96C10;
   --tekst:#1B2233; --szary:#556075; --linia:#DDE2EC; --tlo-jasne:#F1F4F9; --biel:#fff;
-  --naglowek:68px; --r:14px;
+  --pasek:36px; --wiersz:72px; --naglowek:calc(var(--pasek) + var(--wiersz)); --r:12px;
   --f-nag:"Nunito",system-ui,sans-serif; --f-txt:"Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 *{box-sizing:border-box}
-html{overflow-x:clip;scroll-behavior:smooth;scroll-padding-top:calc(var(--naglowek) + 8px);-webkit-text-size-adjust:100%}
+html{overflow-x:clip;scroll-behavior:smooth;scroll-padding-top:calc(var(--wiersz) + 10px);-webkit-text-size-adjust:100%}
 body{margin:0;font:17px/1.6 var(--f-txt);color:var(--tekst);background:var(--biel);overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:var(--granat)}
-h1,h2,h3{font-family:var(--f-nag);color:var(--granat-ciemny);line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
+h1,h2,h3,h4{font-family:var(--f-nag);color:var(--granat-ciemny);line-height:1.15;margin:0 0 .5em;letter-spacing:-.01em}
 h2{font-size:clamp(28px,3.2vw,42px);font-weight:900}
 h3{font-size:19px;font-weight:800}
+h4{font-size:17px;font-weight:800}
 p{margin:0 0 1em}
 .wrap{width:min(1240px,100% - 40px);margin-inline:auto}
 button{font:inherit;cursor:pointer}
 svg use{pointer-events:none}
 
 /* przyciski */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:52px;padding:0 24px;border-radius:999px;font-family:var(--f-nag);font-weight:800;font-size:17px;text-decoration:none;border:0;transition:background .2s,transform .15s}
-.btn svg{width:19px;height:19px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:52px;padding:0 24px;border-radius:10px;font-family:var(--f-nag);font-weight:800;font-size:17px;text-decoration:none;border:0;transition:background .2s,color .2s,transform .15s;text-align:center;line-height:1.2}
+.btn svg{width:19px;height:19px;flex:none}
 .btn-glowny{background:var(--pomarancz);color:#fff}
 .btn-glowny:hover{background:var(--pomarancz-ciemny)}
-.btn-pomarancz{background:var(--pomarancz);color:#fff;width:100%}
-.btn-pomarancz:hover{background:var(--pomarancz-ciemny)}
+.btn-pelny{width:100%}
 .btn-jasny{background:#fff;color:var(--granat);border:2px solid var(--granat)}
+.btn-obrys{background:transparent;color:var(--granat);border:2px solid var(--granat)}
+.btn-obrys:hover{background:var(--granat);color:#fff}
 .btn:active{transform:scale(.98)}
-.link-strzalka{font-family:var(--f-nag);font-weight:800;color:var(--granat);text-decoration:none;border-bottom:2px solid rgba(238,128,35,.55);padding-bottom:2px}
-.link-strzalka::after{content:" \2192"}
-.link-strzalka:hover{border-color:var(--pomarancz)}
 
 /* naglowek */
-.naglowek{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(8px);box-shadow:0 1px 0 var(--linia)}
-.naglowek-in{height:var(--naglowek);display:flex;align-items:center;gap:28px}
+.naglowek{position:sticky;top:calc(-1 * var(--pasek));z-index:50;background:rgba(255,255,255,.97);backdrop-filter:saturate(1.4) blur(8px);box-shadow:0 1px 0 var(--linia)}
+.pasek-gorny{background:var(--granat-ciemny);color:#D3DAF0;font-size:14px;height:var(--pasek)}
+.pasek-gorny-in{height:100%;display:flex;align-items:center;gap:28px}
+.pasek-gorny a{color:#fff;text-decoration:none}
+.pasek-gorny a:hover{text-decoration:underline}
+.pasek-tel{margin-left:auto;display:inline-flex;align-items:center;gap:8px}
+.pasek-tel svg{width:15px;height:15px;color:var(--pomarancz)}
+.pasek-tel b{font-family:var(--f-nag);font-weight:900;font-size:15px}
+.naglowek-in{height:var(--wiersz);display:flex;align-items:center;gap:24px}
 .logo{display:block;flex:none}
 .logo svg{height:34px;width:auto;display:block}
-.menu{display:flex;gap:4px;margin-left:auto}
-.menu a{font-family:var(--f-nag);font-weight:800;font-size:15.5px;color:var(--tekst);text-decoration:none;padding:8px 11px;border-radius:8px;position:relative;white-space:nowrap}
-.menu a:hover{color:var(--granat)}
+.menu{display:flex;gap:2px;margin-left:auto}
+.menu a{font-family:var(--f-nag);font-weight:800;font-size:15.5px;color:var(--tekst);text-decoration:none;padding:10px 10px;border-radius:8px;position:relative;white-space:nowrap}
+.menu a:hover{color:var(--granat);background:var(--tlo-jasne)}
 .menu a.aktywny{color:var(--granat)}
-.menu a.aktywny::after{content:"";position:absolute;left:11px;right:11px;bottom:2px;height:3px;border-radius:3px;background:var(--pomarancz)}
-.tel-naglowek{display:inline-flex;align-items:center;gap:8px;background:var(--granat);color:#fff;text-decoration:none;font-family:var(--f-nag);font-weight:800;padding:10px 18px;border-radius:999px;white-space:nowrap}
+.menu a.aktywny::after{content:"";position:absolute;left:10px;right:10px;bottom:3px;height:3px;border-radius:3px;background:var(--pomarancz)}
+.tel-naglowek{display:none;align-items:center;gap:8px;background:var(--granat);color:#fff;text-decoration:none;font-family:var(--f-nag);font-weight:800;padding:10px 18px;border-radius:10px;white-space:nowrap;margin-left:auto}
 .tel-naglowek svg{width:17px;height:17px}
 .tel-naglowek:hover{background:var(--granat-ciemny)}
 .hamburger{display:none;width:46px;height:46px;border:0;background:transparent;padding:11px;flex-direction:column;justify-content:space-between}
@@ -48,168 +54,235 @@ svg use{pointer-events:none}
 .hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(9.5px) rotate(45deg)}
 .hamburger[aria-expanded="true"] span:nth-child(2){opacity:0}
 .hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-9.5px) rotate(-45deg)}
-.panel{border-top:1px solid var(--linia);background:#fff;padding:8px 20px 22px}
-.panel nav a{display:block;font-family:var(--f-nag);font-weight:800;font-size:20px;color:var(--granat-ciemny);text-decoration:none;padding:13px 0;border-bottom:1px solid var(--linia)}
+.panel{border-top:1px solid var(--linia);background:#fff;padding:6px 20px 22px;max-height:calc(100svh - var(--wiersz));overflow-y:auto}
+.panel nav a{display:block;font-family:var(--f-nag);font-weight:800;font-size:19px;color:var(--granat-ciemny);text-decoration:none;padding:12px 0;border-bottom:1px solid var(--linia)}
+.panel nav a.aktywny{color:var(--pomarancz-ciemny)}
 .panel-adres{margin:16px 0 0;color:var(--szary);font-size:15.5px;line-height:1.55}
 .panel-adres a{font-weight:700}
 
 /* hero */
-.hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:calc(100svh - var(--naglowek));background:#fff;overflow:hidden}
-.hero-tekst{grid-column:1;grid-row:1;display:flex;align-items:center;justify-content:flex-end;padding:40px 56px 40px 20px;position:relative;z-index:2}
-.hero-in{width:min(600px,100%)}
+.hero{position:relative;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);min-height:calc(100svh - var(--naglowek));background:#fff;overflow:hidden}
+.hero-tekst{grid-column:1;grid-row:1;display:flex;align-items:center;justify-content:flex-start;padding:48px 56px 48px max(20px,calc((100vw - 1240px) / 2));position:relative;z-index:2}
+.hero-in{width:min(610px,100%)}
 .hero-foto{grid-column:2;grid-row:1;margin:0;position:relative;background:#E9EDF2}
 .hero-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
-.hero-foto::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#fff 0,rgba(255,255,255,0) 22%),linear-gradient(0deg,rgba(255,255,255,.85) 0,rgba(255,255,255,0) 14%)}
-.hero-foto figcaption{position:absolute;z-index:2;right:20px;bottom:16px;font-size:13.5px;color:var(--granat-ciemny);background:rgba(255,255,255,.88);padding:5px 12px;border-radius:999px}
+.hero-foto::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#fff 0,rgba(255,255,255,0) 18%)}
+.hero-foto figcaption{position:absolute;z-index:2;left:32px;bottom:28px;display:flex;align-items:center;gap:10px;font-family:var(--f-nag);font-weight:800;font-size:18px;color:#fff;background:var(--granat);padding:11px 18px 11px 14px;border-radius:8px;box-shadow:0 10px 30px rgba(31,47,107,.25)}
+.hero-foto figcaption svg{width:34px;height:11px;color:var(--pomarancz);flex:none}
 .hero-adres{font-weight:700;color:var(--szary);margin-bottom:14px}
-.hero h1{font-size:clamp(36px,3.9vw,58px);font-weight:900;margin-bottom:18px}
-.lead{font-size:clamp(17px,1.35vw,20px);color:#3A4458;max-width:34em;margin-bottom:28px}
+.hero h1{font-size:clamp(36px,3.5vw,54px);font-weight:900;margin-bottom:20px}
+.lead{font-size:clamp(17px,1.3vw,20px);color:#3A4458;max-width:34em;margin-bottom:30px}
 .hero-akcje{display:flex;flex-wrap:wrap;align-items:center;gap:16px 26px}
-.hero-uwaga{margin:20px 0 0;color:var(--szary);font-size:15px}
 
 /* sekcje */
 .sekcja{padding:96px 0}
 .sekcja-glowa{max-width:760px;margin-bottom:36px}
 .sekcja-glowa p{color:var(--szary);font-size:18px}
 .duzy{font-size:19px;color:#2C3550}
-.separator{display:flex;align-items:center;gap:18px;color:var(--granat);opacity:.55}
-.separator::before,.separator::after{content:"";flex:1;height:1px;background:var(--linia)}
-.separator svg{width:64px;height:20px}
 
 /* lista z koscia */
 .lista-kosc{list-style:none;padding:0;margin:0 0 1.2em}
 .lista-kosc li{position:relative;padding-left:34px;margin-bottom:.55em}
-.lista-kosc li::before{content:"";position:absolute;left:0;top:.5em;width:22px;height:7px;background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 20'%3E%3Cpath d='M10 6.2a4.2 4.2 0 1 0-4.6 6.4 4.2 4.2 0 1 0 6.8 2.6H51.8a4.2 4.2 0 1 0 6.8-2.6 4.2 4.2 0 1 0-4.6-6.4 4.4 4.4 0 0 0-2.2 1.6H12.2A4.4 4.4 0 0 0 10 6.2Z' fill='%23EE8023'/%3E%3C/svg%3E")}
+.lista-kosc li::before{content:"";position:absolute;left:0;top:.55em;width:22px;height:7px;background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 20'%3E%3Cpath d='M10 6.2a4.2 4.2 0 1 0-4.6 6.4 4.2 4.2 0 1 0 6.8 2.6H51.8a4.2 4.2 0 1 0 6.8-2.6 4.2 4.2 0 1 0-4.6-6.4 4.4 4.4 0 0 0-2.2 1.6H12.2A4.4 4.4 0 0 0 10 6.2Z' fill='%23EE8023'/%3E%3C/svg%3E")}
 .lista-kosc.dwie{columns:2;column-gap:36px}
 .lista-kosc.dwie li{break-inside:avoid}
+.lista-kosc b{color:var(--granat-ciemny)}
 
-/* densytometria */
-.densy-siatka{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:64px;align-items:start}
-.densy h3{margin-top:1.4em}
-.lekarz-wiersz{display:flex;gap:22px;align-items:center;margin-top:28px;padding-top:24px;border-top:1px solid var(--linia)}
-.lekarz-wiersz img{width:190px;flex:none;mix-blend-mode:multiply}
-.lekarz-wiersz p{margin:0;color:#3A4458}
-.cennik{position:sticky;top:calc(var(--naglowek) + 24px);background:var(--granat);color:#fff;border-radius:var(--r);padding:36px 34px 30px;overflow:hidden}
-.cennik h3{color:#fff;font-size:24px;margin-bottom:18px}
-.cennik ul{list-style:none;padding:0;margin:0 0 26px}
-.cennik li{display:flex;justify-content:space-between;gap:18px;align-items:baseline;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.16)}
-.cennik li span{color:#E4E9F7}
-.cennik li b{font-family:var(--f-nag);font-size:21px;font-weight:900;white-space:nowrap;color:#fff}
-.cennik-uwaga{margin:14px 0 0;font-size:13.5px;color:#B9C3E3}
-.cennik-kosc{position:absolute;right:-30px;top:-14px;width:190px;height:60px;color:rgba(255,255,255,.1);transform:rotate(-12deg)}
-
-/* usg */
-.usg{background:var(--tlo-jasne);margin-top:96px}
-.usg-siatka{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
-.usg-grupy{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 30px;margin-top:28px}
-.usg-grupy div{border-top:2px solid var(--granat);padding-top:12px}
-.usg-grupy h3{font-size:17px;margin-bottom:4px}
-.usg-grupy p{margin:0;color:#3A4458;font-size:15.5px}
-.separator + .usg{margin-top:0}
-
-/* karuzela */
-.karuzela{position:relative;min-width:0}
-.karuzela-tor{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:var(--r);background:#0d0f14;cursor:grab;outline:none}
-.karuzela-tor::-webkit-scrollbar{display:none}
-.karuzela-tor.ciagnie{cursor:grabbing;scroll-snap-type:none}
-.karuzela-tor figure{flex:0 0 100%;margin:0;scroll-snap-align:start;position:relative;aspect-ratio:4/3}
-.karuzela-tor img{width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none}
-.karuzela-tor figure:first-child{background:#fff}
-.karuzela-tor figure:first-child img{object-fit:contain;padding:18px}
-.karuzela-tor figcaption{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.92);color:var(--granat-ciemny);font-size:14px;font-weight:700;padding:5px 12px;border-radius:999px}
-.karuzela-ster{display:flex;align-items:center;justify-content:flex-end;gap:12px;margin-top:14px}
-.karuzela-ster button,.tor-ster button{width:46px;height:46px;border-radius:50%;border:2px solid var(--granat);background:#fff;color:var(--granat);font-size:20px;line-height:1}
-.karuzela-ster button:hover,.tor-ster button:hover{background:var(--granat);color:#fff}
-.k-licznik{font-weight:700;color:var(--szary);min-width:56px;text-align:center}
-
-/* zabiegi - tor kart */
-.karty-tor{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px max(20px,calc((100% - 1240px)/2)) 8px;scroll-padding-inline:max(20px,calc((100% - 1240px)/2));cursor:grab;outline:none}
-.karty-tor::-webkit-scrollbar{display:none}
-.karty-tor.ciagnie{cursor:grabbing;scroll-snap-type:none}
-.karta{flex:0 0 min(380px,82vw);scroll-snap-align:start;background:#fff;border:1px solid var(--linia);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
-.karta-foto{aspect-ratio:16/11;overflow:hidden;background:#E9EDF2}
-.karta-foto img{width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none}
-.karta-foto-jasne{background:#fff}
-.karta-foto-jasne img{object-fit:contain;padding:14px}
-.karta-tekst{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
-.karta-tekst p{color:#3A4458;font-size:16px}
-.karta-kto{margin:auto 0 0;padding-top:12px;border-top:1px solid var(--linia);font-size:14.5px!important;font-weight:700;color:var(--granat)!important}
-.tor-ster{display:flex;justify-content:flex-end;gap:12px;margin-top:18px}
-
-/* gabinety */
-.gabinety{background:var(--tlo-jasne)}
+/* 1. poradnie */
+.poradnie{background:var(--tlo-jasne)}
 .katalog{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 34px}
-.spec{padding:18px 0 16px;border-top:1px solid #CBD3E2;break-inside:avoid}
+.spec{padding:18px 0 16px;border-top:1px solid #CBD3E2}
 .spec h3{font-size:17px;margin-bottom:6px}
 .spec ul{list-style:none;padding:0;margin:0}
 .spec li{font-size:15.5px;color:#3A4458;padding:2px 0}
 .spec em{font-style:normal;font-size:12.5px;font-weight:700;color:var(--pomarancz-ciemny);margin-left:6px;white-space:nowrap}
 .katalog-uwaga{margin:26px 0 0;color:var(--szary);font-size:15px}
 
-/* fizjo */
-.fizjo-siatka{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:64px;align-items:center}
-.fizjo-foto{margin:0;border-radius:var(--r);overflow:hidden;position:relative}
-.fizjo-foto img{width:100%;aspect-ratio:3/2;object-fit:cover}
-.fizjo-listy{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 30px;margin-top:10px}
-.fizjo-listy h3{font-size:17px}
-.fizjo-listy li{font-size:15.5px}
+/* 2. fizjoterapia */
+.fizjo-gora{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:64px;align-items:start}
+.fizjo-wstep h3{margin-top:1.3em}
+.pomoc li{font-size:16px}
+.fizjo-galeria{position:sticky;top:calc(var(--wiersz) + 24px)}
+.fizjo-galeria .karuzela-tor figure{aspect-ratio:3/2}
+.fizjo-podtytul{margin:72px 0 18px;font-size:clamp(22px,2vw,28px);font-weight:900}
+.zabiegi-fizjo{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;outline:none}
+.zabiegi-fizjo article{background:var(--tlo-jasne);border-radius:var(--r);padding:20px 18px 18px;border-top:3px solid var(--granat)}
+.zabiegi-fizjo h4{font-size:16.5px;margin-bottom:8px}
+.zabiegi-fizjo p{margin:0;font-size:15px;color:#3A4458;line-height:1.5}
+.specjalista{margin-top:72px;padding-top:40px;border-top:1px solid var(--linia);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.2fr);gap:48px}
+.specjalista-glowa h3{font-size:clamp(22px,2vw,28px);font-weight:900}
+.specjalista-glowa p{color:#3A4458}
+.specjalista-kol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.specjalista-kol h4{font-size:16px;padding-bottom:8px;border-bottom:2px solid var(--pomarancz);display:inline-block}
+.specjalista-kol ul{list-style:none;margin:0;padding:0}
+.specjalista-kol li{font-size:15px;color:#3A4458;padding:6px 0;border-bottom:1px solid var(--linia);line-height:1.45}
 
-/* kontakt */
-.kontakt{background:#fff;border-top:1px solid var(--linia)}
+/* 3. densytometria - mocna sekcja granatowa */
+.densy{background:var(--granat);color:#E6EBF8;position:relative;overflow:hidden}
+.densy h2,.densy h3{color:#fff}
+.densy .duzy{color:#fff}
+.densy-kosc{position:absolute;right:-120px;top:40px;width:620px;height:194px;color:rgba(255,255,255,.07);transform:rotate(-14deg);pointer-events:none}
+.densy-siatka{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:64px;align-items:start;position:relative}
+.densy h3{margin-top:1.4em}
+.densy .lista-kosc b{color:#fff}
+.lekarz-wiersz{display:flex;gap:22px;align-items:center;margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.2)}
+.lekarz-foto{flex:none;width:200px;background:#fff;border-radius:10px;padding:10px}
+.lekarz-wiersz p{margin:0}
+.lekarz-wiersz b{color:#fff}
+.cennik{position:sticky;top:calc(var(--wiersz) + 24px);background:#fff;color:var(--tekst);border-radius:var(--r);padding:34px 32px 28px;box-shadow:0 24px 60px rgba(10,20,60,.28)}
+.cennik h3{color:var(--granat-ciemny);font-size:24px;margin:0 0 14px}
+.cennik ul{list-style:none;padding:0;margin:0 0 24px}
+.cennik li{display:flex;justify-content:space-between;gap:18px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--linia)}
+.cennik li span{color:#3A4458}
+.cennik li b{font-family:var(--f-nag);font-size:21px;font-weight:900;white-space:nowrap;color:var(--granat)}
+.cennik-uwaga{margin:14px 0 0;font-size:13.5px;color:var(--szary)}
+
+/* 4. usg */
+.usg{background:var(--tlo-jasne)}
+.usg-siatka{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+.usg-grupy{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 30px;margin-top:28px}
+.usg-grupy div{border-top:2px solid var(--granat);padding-top:12px}
+.usg-grupy h3{font-size:17px;margin-bottom:4px}
+.usg-grupy p{margin:0;color:#3A4458;font-size:15.5px}
+
+/* karuzele */
+.karuzela{position:relative;min-width:0}
+.karuzela-tor{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:var(--r);background:#0d0f14;cursor:grab;outline:none;overscroll-behavior-x:contain}
+.karuzela-tor::-webkit-scrollbar{display:none}
+.karuzela-tor:focus-visible{box-shadow:0 0 0 3px var(--pomarancz)}
+.karuzela-tor.ciagnie{cursor:grabbing;scroll-snap-type:none}
+.karuzela-tor figure{flex:0 0 100%;margin:0;scroll-snap-align:start;position:relative;aspect-ratio:4/3}
+.karuzela-tor img{width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none}
+.karuzela-tor figure.na-bieli,.zabieg-foto.na-bieli{background:#fff}
+.karuzela-tor figure.na-tle-usg{background:#D9E3EB}
+.karuzela-tor figure.na-tle-usg img{object-fit:contain}
+.karuzela-tor figure.na-bieli img,.zabieg-foto.na-bieli>img{object-fit:contain;padding:16px}
+.karuzela-tor figcaption{position:absolute;left:12px;bottom:12px;max-width:calc(100% - 24px);background:rgba(255,255,255,.94);color:var(--granat-ciemny);font-size:14px;font-weight:700;padding:5px 11px;border-radius:6px;line-height:1.35}
+.karuzela-ster{display:flex;align-items:center;justify-content:flex-end;gap:12px;margin-top:14px}
+.karuzela-ster button{width:46px;height:46px;border-radius:50%;border:2px solid var(--granat);background:#fff;color:var(--granat);font-size:20px;line-height:1}
+.karuzela-ster button:hover{background:var(--granat);color:#fff}
+.k-licznik{font-weight:700;color:var(--szary);min-width:56px;text-align:center}
+
+/* 5. emg */
+.emg-siatka{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px;align-items:center}
+.emg-foto{margin:0;background:var(--tlo-jasne);border-radius:var(--r);padding:36px;display:flex;justify-content:center}
+.emg-foto img{width:min(360px,100%);mix-blend-mode:multiply}
+.emg-lekarze{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 28px;margin-top:22px;padding-top:20px;border-top:1px solid var(--linia)}
+.emg-lekarze p{margin:0}
+.emg-lekarze b{display:block;font-family:var(--f-nag);color:var(--granat-ciemny)}
+.emg-lekarze span{font-size:15px;color:var(--szary)}
+
+/* 6. zabiegi */
+.zabiegi{background:var(--tlo-jasne)}
+.zabiegi-siatka{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.zabieg{background:#fff;border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 var(--linia),0 10px 30px rgba(31,47,107,.06)}
+.zabieg-foto{aspect-ratio:16/11;overflow:hidden;background:#E9EDF2;position:relative;margin:0}
+.zabieg-foto>img{width:100%;height:100%;object-fit:cover}
+.zabieg-foto.karuzela{overflow:hidden}
+.zabieg-foto .karuzela-tor{height:100%;border-radius:0}
+.zabieg-foto .karuzela-tor figure{aspect-ratio:auto;height:100%}
+.karuzela-tor.ciemne{background:#0f1a33}
+.karuzela-tor.ciemne img{object-fit:contain}
+.zabieg-foto .karuzela-ster{position:absolute;right:10px;top:10px;margin:0;gap:6px}
+.zabieg-foto .karuzela-ster button{width:36px;height:36px;font-size:16px;border-width:0;background:rgba(255,255,255,.94)}
+.zabieg-foto .karuzela-ster button:hover{background:var(--granat);color:#fff}
+.zabieg-foto .k-licznik{background:rgba(255,255,255,.94);border-radius:6px;padding:3px 8px;font-size:13.5px;min-width:0;color:var(--granat-ciemny)}
+.zabieg-typo{background:var(--granat);display:flex;flex-direction:column;justify-content:center;padding:28px 30px;color:#fff;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 20'%3E%3Cpath d='M10 6.2a4.2 4.2 0 1 0-4.6 6.4 4.2 4.2 0 1 0 6.8 2.6H51.8a4.2 4.2 0 1 0 6.8-2.6 4.2 4.2 0 1 0-4.6-6.4 4.4 4.4 0 0 0-2.2 1.6H12.2A4.4 4.4 0 0 0 10 6.2Z' fill='none' stroke='%23ffffff' stroke-opacity='.09' stroke-width='1.2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:56% auto;background-position:112% 14%}
+.typo-liczba{font-family:var(--f-nag);font-weight:900;font-size:clamp(56px,5vw,76px);line-height:1;color:#fff}
+.typo-liczba::after{content:"";display:block;width:64px;height:4px;border-radius:2px;background:var(--pomarancz);margin:16px 0 14px}
+.typo-opis{font-size:16px;color:#D9E0F5;max-width:20em;line-height:1.45}
+.zabieg-tekst{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
+.zabieg-tekst h3{font-size:20px}
+.zabieg-tekst p{color:#3A4458;font-size:16px}
+.zabieg-kto{margin:auto 0 0!important;padding-top:12px;border-top:1px solid var(--linia);font-size:14.5px!important;font-weight:700;color:var(--granat)!important}
+
+/* 7. kontakt */
+.kontakt{background:#fff}
 .kontakt-siatka{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:56px;align-items:stretch}
 .kontakt-tel a{display:inline-flex;align-items:center;gap:12px;font-family:var(--f-nag);font-weight:900;font-size:clamp(30px,3vw,40px);color:var(--granat-ciemny);text-decoration:none}
 .kontakt-tel svg{width:30px;height:30px;color:var(--pomarancz)}
 .kontakt dl{display:grid;grid-template-columns:auto 1fr;gap:10px 22px;margin:22px 0 30px}
 .kontakt dt{font-weight:700;color:var(--szary)}
-.kontakt dd{margin:0}
+.kontakt dd{margin:0;min-width:0;overflow-wrap:anywhere}
 .formularz{border-top:1px solid var(--linia);padding-top:24px;display:grid;gap:14px}
 .formularz h3{margin:0}
 .formularz label{display:grid;gap:5px;font-weight:700;font-size:15px;color:#3A4458}
 .formularz input,.formularz textarea{font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid #C9D1E0;border-radius:10px;background:#fff;color:var(--tekst);width:100%}
 .formularz input:focus,.formularz textarea:focus{outline:none;border-color:var(--granat);box-shadow:0 0 0 3px rgba(44,66,144,.15)}
+.formularz .zgoda{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:14.5px}
+.formularz .zgoda input{width:20px;height:20px;flex:none;margin:2px 0 0;accent-color:var(--granat)}
 .formularz .btn{justify-self:start}
 .form-info{margin:0;color:var(--granat);font-weight:700}
-.mapa{display:flex;flex-direction:column;gap:14px;min-height:460px}
-.mapa iframe{flex:1;width:100%;min-height:420px;border:0;border-radius:var(--r)}
+.mapa{display:flex;flex-direction:column;gap:14px;min-height:480px}
+.mapa-ramka{flex:1;display:flex;min-height:420px;border-radius:var(--r);overflow:hidden;background:var(--tlo-jasne)}
+.mapa-ramka iframe{flex:1;width:100%;border:0}
+.mapa-zastepcza{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:10px;padding:32px}
+.mapa-zastepcza p{margin:0;color:#3A4458}
+.mapa .btn-obrys{align-self:flex-start}
 
 /* stopka */
-.stopka{background:var(--granat-ciemny);color:#C9D2EE;padding:52px 0 26px;font-size:15.5px}
+.stopka{background:var(--granat-ciemny);color:#C9D2EE;padding:56px 0 26px;font-size:15.5px}
 .stopka a{color:#fff;text-decoration:none}
 .stopka a:hover{text-decoration:underline}
-.stopka-siatka{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.stopka-siatka{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:28px}
 .stopka-firma b{font-family:var(--f-nag);font-size:20px;color:#fff;letter-spacing:.02em}
-.stopka-firma p{margin:8px 0 0}
+.stopka-firma p{margin:8px 0 0;max-width:30em}
 .stopka-menu{display:flex;flex-direction:column;gap:7px}
-.stopka-dol{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 20px;margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-size:14px}
+.stopka-dol{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 20px;margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-size:14px}
 .stopka-dol .wylinka-badge{color:#C9D2EE}
 
 /* pasek mobilny */
 .pasek-mob{display:none}
 
+/* cookies */
+.cookies{position:fixed;left:16px;bottom:16px;z-index:60;width:min(440px,calc(100% - 32px));background:#fff;border-radius:var(--r);box-shadow:0 20px 60px rgba(15,25,60,.28);border:1px solid var(--linia)}
+.cookies-in{padding:20px 20px 18px}
+.cookies-tytul{font-family:var(--f-nag);font-weight:900;color:var(--granat-ciemny);font-size:18px;margin:0 0 6px}
+.cookies p{font-size:14.5px;line-height:1.5;color:#3A4458;margin:0 0 12px}
+.cookies-opcje{display:grid;gap:8px;margin:0 0 14px;padding:12px 14px;background:var(--tlo-jasne);border-radius:10px;font-size:14.5px}
+.cookies-opcje label{display:flex;gap:8px;align-items:center}
+.cookies-opcje input{width:18px;height:18px;accent-color:var(--granat)}
+.cookies-przyciski{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center}
+.cookies-przyciski .btn{min-height:44px;padding:0 16px;font-size:15px}
+.cookies-link{border:0;background:none;color:var(--granat);font-weight:700;text-decoration:underline;padding:8px 4px;font-size:15px}
+
 /* ===== responsywnosc ===== */
-@media (max-width:1180px){
-  .menu a{padding:8px 8px;font-size:15px}
+@media (max-width:1320px){
+  .menu a{padding:10px 8px;font-size:15px}
   .menu a.aktywny::after{left:8px;right:8px}
-  .naglowek-in{gap:18px}
-  .katalog{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .naglowek-in{gap:16px}
+  .logo svg{height:30px}
+  .zabiegi-fizjo{grid-template-columns:repeat(4,minmax(0,1fr))}
 }
-@media (max-width:1040px){
+@media (max-width:1180px){
+  :root{--pasek:0px}
+  .pasek-gorny{display:none}
   .menu{display:none}
-  .tel-naglowek{margin-left:auto}
+  .tel-naglowek{display:inline-flex}
   .hamburger{display:flex}
+  .logo svg{height:34px}
+  .katalog{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .zabiegi-fizjo{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .specjalista{grid-template-columns:minmax(0,1fr);gap:24px}
 }
 @media (min-width:761px) and (max-height:820px){
-  .hero h1{font-size:clamp(32px,3.4vw,48px)}
-  .lead{margin-bottom:22px}
+  .hero h1{font-size:clamp(32px,3.3vw,48px)}
+  .lead{margin-bottom:24px}
   .hero-adres{margin-bottom:10px}
 }
+@media (max-width:1040px){
+  .zabiegi-siatka{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 @media (max-width:960px){
-  .densy-siatka,.usg-siatka,.fizjo-siatka,.kontakt-siatka{grid-template-columns:minmax(0,1fr);gap:40px}
-  .cennik{position:relative;top:0}
+  .densy-siatka,.usg-siatka,.kontakt-siatka,.fizjo-gora,.emg-siatka{grid-template-columns:minmax(0,1fr);gap:40px}
+  .cennik,.fizjo-galeria{position:relative;top:0}
   .katalog{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stopka-siatka{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .stopka-firma{grid-column:1/-1}
+  .emg-foto{max-width:420px}
 }
 @media (max-width:760px){
-  :root{--naglowek:60px}
+  :root{--wiersz:60px}
   body{font-size:16px}
   .wrap{width:calc(100% - 32px)}
   .logo svg{height:28px}
@@ -219,45 +292,56 @@ svg use{pointer-events:none}
   .hamburger{margin-right:-8px}
 
   .hero{display:flex;flex-direction:column;min-height:calc(100svh - var(--naglowek))}
-  .hero-foto{flex:1 1 0;min-height:min(56vw,24svh);align-self:stretch;width:100%}
-  .hero-foto img{object-position:55% 22%}
-  .hero-foto::before{background:linear-gradient(0deg,#fff 0,rgba(255,255,255,0) 26%)}
-    .hero-foto figcaption{display:none}
-  .hero-tekst{flex:0 0 auto;padding:4px 16px calc(18px + env(safe-area-inset-bottom));justify-content:flex-start}
+  .hero-foto{flex:1 1 0;min-height:min(58vw,30svh);align-self:stretch;width:100%}
+  .hero-foto img{object-position:58% 30%}
+  .hero-foto::before{background:linear-gradient(0deg,#fff 0,rgba(255,255,255,0) 18%)}
+  .hero-foto figcaption{left:16px;bottom:22px;font-size:15px;padding:8px 13px 8px 11px;gap:8px}
+  .hero-foto figcaption svg{width:26px;height:9px}
+  .hero-tekst{flex:0 0 auto;padding:8px 16px calc(20px + env(safe-area-inset-bottom));justify-content:flex-start}
   .hero-adres{font-size:14px;margin-bottom:6px}
-  .hero h1{font-size:clamp(25px,min(7.4vw,4.4svh),34px);margin-bottom:10px}
-  .lead{font-size:clamp(15px,min(4.1vw,2.4svh),17px);line-height:1.5;margin-bottom:16px}
-  .hero-akcje{gap:12px 18px}
+  .hero h1{font-size:clamp(25px,min(7.2vw,4.3svh),34px);margin-bottom:10px}
+  .lead{font-size:clamp(15px,min(4.1vw,2.45svh),17px);line-height:1.5;margin-bottom:24px}
   .hero-akcje .btn{width:100%;min-height:50px}
-  .hero-akcje .link-strzalka{font-size:15.5px}
-  .hero-uwaga{display:none}
 
   .sekcja{padding:64px 0}
-  .usg{margin-top:64px}
   h2{font-size:clamp(26px,7.4vw,32px)}
   .duzy{font-size:17px}
   .lista-kosc.dwie{columns:1}
   .lekarz-wiersz{flex-direction:column;align-items:flex-start}
-  .lekarz-wiersz img{width:200px}
-  .cennik{padding:28px 22px 24px}
+  .cennik{padding:26px 20px 22px}
   .cennik li{font-size:15.5px}
+  .densy-kosc{width:380px;height:120px;right:-140px;top:20px}
   .usg-grupy{grid-template-columns:minmax(0,1fr);gap:16px}
   .katalog{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 18px}
   .spec h3{font-size:15.5px}
   .spec li{font-size:14.5px}
   .spec em{display:block;margin:0}
-  .fizjo-listy{grid-template-columns:minmax(0,1fr)}
+  .fizjo-podtytul{margin-top:52px}
+  .zabiegi-fizjo{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:12px;margin-inline:-16px;padding:0 16px 4px;scroll-padding-inline:16px}
+  .zabiegi-fizjo::-webkit-scrollbar{display:none}
+  .zabiegi-fizjo article{flex:0 0 74%;scroll-snap-align:start}
+  .specjalista{margin-top:52px}
+  .specjalista-kol{grid-template-columns:minmax(0,1fr);gap:22px}
+  .emg-lekarze{grid-template-columns:minmax(0,1fr)}
+  .emg-foto{padding:24px}
+  .zabiegi-siatka{grid-template-columns:minmax(0,1fr);gap:18px}
+  .typo-liczba{font-size:56px}
   .mapa{min-height:360px}
-  .mapa iframe{min-height:320px}
-  .tor-ster,.karuzela-ster button{display:none}
+  .mapa-ramka{min-height:320px}
+  .mapa .btn-obrys{align-self:stretch}
+  .karuzela-ster button{display:none}
+  .zabieg-foto .karuzela-ster button{display:none}
   .karuzela-ster{justify-content:center}
   .formularz .btn{justify-self:stretch}
 
   .stopka{padding-bottom:96px}
-  .stopka-siatka{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px 16px}
+  .stopka-siatka{gap:22px 16px}
   .pasek-mob{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--linia);transform:translateY(110%);transition:transform .25s ease-out}
   .pasek-mob .btn{min-height:48px;padding:0 12px;font-size:16px}
   .pasek-mob.widac{transform:none}
+  .cookies{left:8px;bottom:8px;width:calc(100% - 16px)}
+  .cookies-in{padding:16px 16px 14px}
+  .cookies-przyciski .btn{flex:1 1 auto}
 }
 @media (max-width:380px){
   .katalog{grid-template-columns:minmax(0,1fr)}

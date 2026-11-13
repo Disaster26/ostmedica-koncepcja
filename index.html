@@ -4,14 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Ostmedica Płońsk - densytometria, USG i lekarze specjaliści (wizualizacja)</title>
-<meta name="description" content="Wizualizacja nowej strony Ostmedica w Płońsku: densytometria GE Lunar Prodigy, badania USG, zabiegi w znieczuleniu miejscowym, gabinety lekarzy specjalistów. Rejestracja: 731 100 801.">
+<title>Ostmedica Płońsk - poradnie specjalistyczne, densytometria, USG, EMG i zabiegi</title>
+<meta name="description" content="Ostmedica w Płońsku: poradnie i gabinety lekarskie, fizjoterapia i rehabilitacja, densytometria kości GE Lunar Prodigy, USG i EMG dorosłych i dzieci, zabiegi ortopedyczne, naczyniowe i dermatologiczne. Rejestracja: 731 100 801.">
 <meta name="theme-color" content="#2C4290">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg transform='rotate(-40 20 20)'%3E%3Cpath d='M9.6 15.2a4.6 4.6 0 1 0-4.2 7.4 4.6 4.6 0 1 0 7.4 2.8h14.4a4.6 4.6 0 1 0 7.4-2.8 4.6 4.6 0 1 0-4.2-7.4 4.8 4.8 0 0 0-2.6 1.9H12.2a4.8 4.8 0 0 0-2.6-1.9Z' fill='none' stroke='%232C4290' stroke-width='3.4' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="preload" as="image" href="img/sala.webp">
+<link rel="stylesheet" href="style.css?v=2">
+<link rel="preload" as="image" href="img/sala-chirurgiczna.webp">
 </head>
 <body>
 
@@ -21,6 +22,13 @@
 </svg>
 
 <header class="naglowek" id="gora">
+  <div class="pasek-gorny">
+    <div class="wrap pasek-gorny-in">
+      <span>ul. Dr. L. Rutkowskiego 6, 09-100 Płońsk</span>
+      <a href="mailto:rejestracja@ostmedica.pl">rejestracja@ostmedica.pl</a>
+      <a class="pasek-tel" href="tel:+48731100801"><svg aria-hidden="true"><use href="#ikona-tel"/></svg>Rejestracja: <b>731 100 801</b></a>
+    </div>
+  </div>
   <div class="wrap naglowek-in">
     <a class="logo" href="#gora" aria-label="Ostmedica - strona główna">
       <svg viewBox="0 0 250 40" role="img" aria-hidden="true">
@@ -30,24 +38,26 @@
       </svg>
     </a>
     <nav class="menu" aria-label="Menu główne">
-      <a href="#densytometria">Densytometria</a>
+      <a href="#poradnie">Poradnie i gabinety lekarskie</a>
+      <a href="#fizjoterapia">Fizjoterapia i rehabilitacja</a>
+      <a href="#densytometria">Densytometria kości</a>
       <a href="#usg">USG</a>
+      <a href="#emg">EMG</a>
       <a href="#zabiegi">Zabiegi</a>
-      <a href="#gabinety">Gabinety i lekarze</a>
-      <a href="#fizjoterapia">Fizjoterapia</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
-    <a class="tel-naglowek" href="tel:+48731100801"><svg aria-hidden="true"><use href="#ikona-tel"/></svg><span>731 100 801</span></a>
+    <a class="tel-naglowek" href="tel:+48731100801" aria-label="Zadzwoń do rejestracji: 731 100 801"><svg aria-hidden="true"><use href="#ikona-tel"/></svg><span>731 100 801</span></a>
     <button class="hamburger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="panel"><span></span><span></span><span></span></button>
   </div>
   <div class="panel" id="panel" hidden>
     <nav aria-label="Menu mobilne">
-      <a href="#densytometria">Densytometria i cennik</a>
-      <a href="#usg">Badania USG</a>
-      <a href="#zabiegi">Zabiegi i pracownie</a>
-      <a href="#gabinety">Gabinety i lekarze</a>
-      <a href="#fizjoterapia">Fizjoterapia</a>
-      <a href="#kontakt">Kontakt i dojazd</a>
+      <a href="#poradnie">Poradnie i gabinety lekarskie</a>
+      <a href="#fizjoterapia">Fizjoterapia i rehabilitacja</a>
+      <a href="#densytometria">Densytometria kości</a>
+      <a href="#usg">USG</a>
+      <a href="#emg">EMG</a>
+      <a href="#zabiegi">Zabiegi</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
     <p class="panel-adres">ul. Dr. L. Rutkowskiego 6, 09-100 Płońsk<br>Rejestracja: <a href="tel:+48731100801">731 100 801</a></p>
   </div>
@@ -56,29 +66,119 @@
 <main>
 <section class="hero" aria-labelledby="h1">
   <figure class="hero-foto">
-    <img src="img/sala.webp" alt="Lek. Łukasz Cieślak w nowej sali zabiegowej Ostmedica w Płońsku" width="734" height="950" fetchpriority="high">
-    <figcaption>Nowa sala zabiegowa, lek. Łukasz Cieślak</figcaption>
+    <img src="img/sala-chirurgiczna.webp" alt="Nowa sala chirurgiczna Ostmedica w Płońsku, przy stole lek. Łukasz Cieślak" width="762" height="1011" fetchpriority="high">
+    <figcaption><svg aria-hidden="true"><use href="#kosc"/></svg>Nowa sala chirurgiczna</figcaption>
   </figure>
   <div class="hero-tekst">
     <div class="hero-in">
       <p class="hero-adres">Płońsk, ul. Dr. L. Rutkowskiego 6</p>
-      <h1 id="h1">Badanie gęstości kości, USG i lekarze specjaliści w Płońsku</h1>
-      <p class="lead">Densytometria na aparacie GE Lunar Prodigy, badania USG dzieci i dorosłych, zabiegi w znieczuleniu miejscowym i gabinety lekarzy kilkunastu specjalności pod jednym adresem.</p>
+      <h1 id="h1">Poradnie specjalistyczne, badania i zabiegi w&nbsp;Płońsku</h1>
+      <p class="lead">Poradnie lekarskie specjalistyczne, badania densytometrii, USG i EMG dorosłych i dzieci oraz zabiegi specjalistyczne w zakresie ortopedii, dermatologii, chirurgii ogólnej i naczyniowej.</p>
       <div class="hero-akcje" id="hero-akcje">
         <a class="btn btn-glowny" href="tel:+48731100801"><svg aria-hidden="true"><use href="#ikona-tel"/></svg>Umów wizytę: 731 100 801</a>
-        <a class="link-strzalka" href="#densytometria">Cennik densytometrii</a>
       </div>
-      <p class="hero-uwaga">Wizyty po umówieniu telefonicznym.</p>
     </div>
   </div>
 </section>
 
+<!-- 1. PORADNIE -->
+<section class="sekcja poradnie" id="poradnie" aria-labelledby="h-por">
+  <div class="wrap">
+    <div class="sekcja-glowa">
+      <h2 id="h-por">Poradnie i gabinety lekarskie</h2>
+      <p>Prywatne gabinety lekarzy kilkunastu specjalności pod jednym adresem. Wizyty po wcześniejszym umówieniu w rejestracji.</p>
+    </div>
+    <div class="katalog">
+      <div class="spec"><h3>Ortopedia i traumatologia</h3><ul><li>lek. Łukasz Cieślak</li><li>lek. Arkadiusz Garbacki</li><li>lek. Krzysztof Scharoch</li><li>lek. Krzysztof Skiba</li><li>lek. Martyna Budzińska</li></ul></div>
+      <div class="spec"><h3>Chirurgia ogólna i naczyniowa</h3><ul><li>dr n. med. Krzysztof Ostrowski</li><li>lek. Svitlana Korobova <em>nowy gabinet</em></li><li>lek. Henryk Mazgaj</li></ul></div>
+      <div class="spec"><h3>Poradnia leczenia bólu, neurochirurgia</h3><ul><li>lek. Bartosz Czapski</li></ul></div>
+      <div class="spec"><h3>Osteoporoza i choroby metaboliczne kości</h3><ul><li>lek. Jacek Borowicz</li></ul></div>
+      <div class="spec"><h3>Dermatologia i wenerologia</h3><ul><li>lek. Justyna Śliwiak-Chmura</li><li>lek. Łukasz Pacek</li></ul></div>
+      <div class="spec"><h3>Laryngologia, chirurgia głowy i szyi</h3><ul><li>dr n. med. Rafał Brzeziński</li></ul></div>
+      <div class="spec"><h3>Neurologia</h3><ul><li>lek. Aleksandra Dumowska-Tucholska</li><li>lek. Milena Wyszczelska-Namięta</li></ul></div>
+      <div class="spec"><h3>Neurologia dziecięca</h3><ul><li>lek. Magdalena Ogrodnik <em>nowy gabinet</em></li></ul></div>
+      <div class="spec"><h3>Pediatria</h3><ul><li>lek. Sławomir Konstantynowicz</li><li>lek. Agnieszka Olszewska</li></ul></div>
+      <div class="spec"><h3>Endokrynologia</h3><ul><li>lek. Beata Woźniak</li></ul></div>
+      <div class="spec"><h3>Diabetologia</h3><ul><li>lek. Edyta Jabłońska-Wypustek</li></ul></div>
+      <div class="spec"><h3>Urologia</h3><ul><li>lek. Zuzanna Nerkowska</li><li>lek. Bartłomiej Domagała</li></ul></div>
+      <div class="spec"><h3>Nefrologia</h3><ul><li>lek. Marcin Czystowski</li></ul></div>
+      <div class="spec"><h3>Radiologia, USG</h3><ul><li>lek. Patryk Krokwiński</li></ul></div>
+      <div class="spec"><h3>Medycyna estetyczna</h3><ul><li>dr n. med. Krzysztof Ostrowski</li></ul></div>
+      <div class="spec"><h3>Fizjoterapia</h3><ul><li>mgr Magdalena Szewczyk</li></ul></div>
+    </div>
+    <p class="katalog-uwaga">W docelowej stronie każdy gabinet ma własną podstronę: zakres leczenia, doświadczenie lekarza i cennik.</p>
+  </div>
+</section>
+
+<!-- 2. FIZJOTERAPIA -->
+<section class="sekcja fizjo" id="fizjoterapia" aria-labelledby="h-fizjo">
+  <div class="wrap">
+    <div class="fizjo-gora">
+      <div class="fizjo-wstep">
+        <h2 id="h-fizjo">Fizjoterapia i rehabilitacja</h2>
+        <p class="duzy">Prywatny Gabinet Fizjoterapii mgr Magdaleny Szewczyk. Rehabilitacja dorosłych i młodzieży po urazach, operacjach i w chorobach neurologicznych.</p>
+        <p>Każdą terapię poprzedza dokładna diagnostyka funkcjonalna i wywiad medyczny.</p>
+        <h3>W czym pomagamy</h3>
+        <ul class="lista-kosc pomoc">
+          <li><b>Bóle kręgosłupa:</b> dyskopatia, rwa kulszowa i ramienna, bóle przeciążeniowe od siedzącego trybu życia.</li>
+          <li><b>Urazy i schorzenia ortopedyczne:</b> skręcenia, zwichnięcia, złamania, uszkodzenia łąkotek, więzadeł i ścięgien, także ścięgna Achillesa.</li>
+          <li><b>Rehabilitacja po operacjach:</b> po artroskopii, rekonstrukcji ACL, endoprotezoplastyce biodra i kolana.</li>
+          <li><b>Zaburzenia neurologiczne:</b> po udarze mózgu, w stwardnieniu rozsianym, przy uszkodzeniach nerwów obwodowych (metody PNF i Bobath).</li>
+          <li><b>Choroby zwyrodnieniowe i przewlekłe:</b> zmiany zwyrodnieniowe stawów i kręgosłupa, reumatoidalne zapalenie stawów.</li>
+        </ul>
+      </div>
+      <div class="karuzela fizjo-galeria" data-karuzela aria-roledescription="karuzela" aria-label="Gabinety fizjoterapii, zdjęcia">
+        <div class="karuzela-tor" tabindex="0">
+          <figure><img src="img/fizjo-fala.webp" alt="Aparaty do terapii falą uderzeniową i laserem wysokoenergetycznym" width="467" height="335"><figcaption>Fala uderzeniowa i laser wysokoenergetyczny</figcaption></figure>
+          <figure><img src="img/fizjo-gabinety.webp" alt="Boksy zabiegowe z aparatami do elektroterapii i fizykoterapii" width="471" height="335" loading="lazy"><figcaption>Elektroterapia i fizykoterapia</figcaption></figure>
+          <figure><img src="img/fizjo-drenaz.webp" alt="Aparat do drenażu pneumatycznego i terapii światłem" width="473" height="280" loading="lazy"><figcaption>Terapia światłem i drenaż pneumatyczny</figcaption></figure>
+          <figure><img src="img/fizjo-manualna.webp" alt="Stół do terapii manualnej i masażu leczniczego" width="467" height="261" loading="lazy"><figcaption>Terapia manualna i masaż leczniczy</figcaption></figure>
+          <figure><img src="img/fizjo-cwiczenia.webp" alt="Sala do terapii w odciążeniu i ćwiczeń leczniczych" width="424" height="222" loading="lazy"><figcaption>Terapia w odciążeniu i ćwiczenia</figcaption></figure>
+        </div>
+        <div class="karuzela-ster">
+          <button class="k-prev" aria-label="Poprzednie zdjęcie">&#8592;</button>
+          <span class="k-licznik">1 / 5</span>
+          <button class="k-next" aria-label="Następne zdjęcie">&#8594;</button>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="fizjo-podtytul">Fizykoterapia: aparatura w gabinecie</h3>
+    <div class="zabiegi-fizjo" data-przewin tabindex="0" aria-label="Zabiegi fizykoterapii">
+      <article><h4>Laser wysokoenergetyczny (HILT)</h4><p>Głęboko penetruje tkanki. Działa przeciwbólowo, przeciwzapalnie i regenerująco, w stanach ostrych i przewlekłych.</p></article>
+      <article><h4>Fala uderzeniowa (ESWT)</h4><p>Przewlekłe stany zapalne, zwapnienia i zmiany przeciążeniowe, np. ostroga piętowa, łokieć tenisisty.</p></article>
+      <article><h4>Diatermia krótkofalowa</h4><p>Pole elektromagnetyczne głęboko ogrzewa tkanki, rozszerza naczynia, rozluźnia bolesne skurcze mięśni.</p></article>
+      <article><h4>Terapia podciśnieniowa</h4><p>Zmniejsza obrzęki, wspomaga drenaż limfatyczny i krążenie krwi.</p></article>
+      <article><h4>Elektroterapia</h4><p>Prądy lecznicze, m.in. TENS, interferencyjne i diadynamiczne: stymulują mięśnie i blokują bodźce bólowe.</p></article>
+      <article><h4>Laser biostymulacyjny, ultradźwięki, magnetoterapia</h4><p>Wspomagają zrost kostny, gojenie i regenerację tkanek.</p></article>
+      <article><h4>BOA - pneumatyczny masaż limfatyczny</h4><p>Drenaż pneumatyczny kończyn przy obrzękach.</p></article>
+      <article><h4>Terapia manualna i masaż leczniczy</h4><p>Także terapia mięśniowo-powięziowych punktów spustowych przy bólu rzutowanym.</p></article>
+      <article><h4>Kinesiology taping</h4><p>Taśmy wspomagające pracę mięśni, stabilizujące stawy, zmniejszające ból, obrzęki i krwiaki.</p></article>
+      <article><h4>Bańki chińskie</h4><p>Rozluźnianie napięć powięziowych.</p></article>
+    </div>
+
+    <div class="specjalista">
+      <div class="specjalista-glowa">
+        <h3>mgr Magdalena Szewczyk, fizjoterapeutka</h3>
+        <p>Wieloletnie doświadczenie w pracy z pacjentami ortopedycznymi, neurologicznymi i po urazach. Indywidualne podejście do każdego problemu zdrowotnego.</p>
+      </div>
+      <div class="specjalista-kol">
+        <div><h4>Wykształcenie</h4><ul><li>Akademia Medyczna w Warszawie, fizjoterapia (licencjat)</li><li>Uniwersytet Medyczny w Łodzi, studia magisterskie</li><li>Studia podyplomowe: kształcenie i wsparcie osób z niepełnosprawnością</li></ul></div>
+        <div><h4>Metody i certyfikaty</h4><ul><li>Certyfikowany międzynarodowy terapeuta PNF</li><li>Terapeuta metody Bobath</li><li>Międzynarodowy certyfikat Kinesiotaping</li><li>Terapia mięśniowo-powięziowych punktów spustowych</li></ul></div>
+        <div><h4>Dydaktyka</h4><ul><li>Wykładowca w Państwowej Akademii Nauk Stosowanych im. Ignacego Mościckiego w Ciechanowie</li><li>Nauczyciel w Publicznej Szkole Policealnej w Płońsku, kierunek technik masażysta</li><li>Egzaminator w kwalifikacji technik masażysta</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. DENSYTOMETRIA -->
 <section class="sekcja densy" id="densytometria" aria-labelledby="h-densy">
+  <svg class="densy-kosc" aria-hidden="true"><use href="#kosc"/></svg>
   <div class="wrap densy-siatka">
     <div class="densy-tekst">
-      <h2 id="h-densy">Densytometria - badanie gęstości mineralnej kości</h2>
+      <h2 id="h-densy">Densytometria kości</h2>
       <p class="duzy">Osteoporoza długo nie daje żadnych dolegliwości. Często pierwszym sygnałem jest złamanie po zwykłym upadku. Densytometria pozwala wykryć ją wcześniej i ocenić 10-letnie ryzyko złamań (FRAX).</p>
-      <p>Badanie wykonujemy na aparacie GE Lunar Prodigy. Jest bezpieczne i bezbolesne, trwa bardzo krótko i nie wymaga specjalnego przygotowania. Najczęściej ocenia się szyjkę kości udowej i odcinek lędźwiowy kręgosłupa (L1-L4).</p>
+      <p>Badanie wykonujemy na aparacie GE Lunar Prodigy. Jest bezpieczne i bezbolesne, trwa krótko i nie wymaga specjalnego przygotowania. Najczęściej ocenia się szyjkę kości udowej i odcinek lędźwiowy kręgosłupa (L1-L4).</p>
       <h3>Kiedy warto się zbadać</h3>
       <ul class="lista-kosc dwie">
         <li>ok. 40. roku życia, gdy w rodzinie była osteoporoza</li>
@@ -89,7 +189,7 @@
         <li>choroby tarczycy, nerek, reumatoidalne zapalenie stawów</li>
       </ul>
       <div class="lekarz-wiersz">
-        <img src="img/densytometr.webp" alt="Densytometr GE Lunar Prodigy" width="434" height="277" loading="lazy">
+        <div class="lekarz-foto"><img src="img/densytometr.webp" alt="Densytometr GE Lunar Prodigy w pracowni Ostmedica" width="434" height="277" loading="lazy"></div>
         <p>Poradnię osteoporozy i chorób metabolicznych kości prowadzi <b>lek. Jacek Borowicz</b>, specjalista densytometrii klinicznej z certyfikatem ISCD. Od 1997 roku kieruje pracowniami densytometrycznymi.</p>
       </div>
     </div>
@@ -103,15 +203,13 @@
         <li><span>Densytometria pediatryczna, kręgosłup</span><b>130 zł</b></li>
         <li><span>Całe ciało (Total body)</span><b>350 zł</b></li>
       </ul>
-      <a class="btn btn-pomarancz" href="tel:+48731100801"><svg aria-hidden="true"><use href="#ikona-tel"/></svg>Zapisz się na badanie</a>
+      <a class="btn btn-glowny btn-pelny" href="tel:+48731100801"><svg aria-hidden="true"><use href="#ikona-tel"/></svg>Zapisz się na badanie</a>
       <p class="cennik-uwaga">Ceny z obecnej strony ostmedica.pl, stan na 07.11.2026.</p>
-      <svg class="cennik-kosc" aria-hidden="true"><use href="#kosc"/></svg>
     </aside>
   </div>
 </section>
 
-<div class="separator wrap" aria-hidden="true"><svg><use href="#kosc"/></svg></div>
-
+<!-- 4. USG -->
 <section class="sekcja usg" id="usg" aria-labelledby="h-usg">
   <div class="wrap usg-siatka">
     <div class="usg-tekst">
@@ -121,16 +219,16 @@
         <div><h3>Pracownia USG</h3><p>jamy brzusznej, tarczycy, piersi, węzłów chłonnych i ślinianek, jąder, układu moczowego, doppler naczyń szyjnych i kończyn</p></div>
         <div><h3>Ortopedia</h3><p>USG narządu ruchu, USG bioder u niemowląt</p></div>
         <div><h3>Pediatria</h3><p>USG dzieci i noworodków, USG przezciemiączkowe</p></div>
-        <div><h3>Ginekologia</h3><p>USG ginekologiczne</p></div>
+        <div><h3>Chirurgia naczyniowa</h3><p>USG doppler naczyń obwodowych</p></div>
       </div>
     </div>
-    <div class="karuzela usg-galeria" data-karuzela aria-roledescription="karuzela" aria-label="Obrazy z aparatów USG">
+    <div class="karuzela usg-galeria" data-karuzela aria-roledescription="karuzela" aria-label="Aparaty i obrazy USG">
       <div class="karuzela-tor" tabindex="0">
-        <figure><img src="img/usg-xcube60.webp" alt="Ultrasonograf Alpinion X-CUBE 60" width="556" height="556" loading="lazy"><figcaption>Alpinion X-CUBE 60</figcaption></figure>
-        <figure><img src="img/usg-doppler.webp" alt="Obraz USG z dopplerem" width="400" height="280" loading="lazy"><figcaption>Color Doppler</figcaption></figure>
+        <figure class="na-tle-usg"><img src="img/usg-xcube60-nowy.webp" alt="Ultrasonograf Alpinion X-CUBE 60" width="417" height="700" loading="lazy"><figcaption>Alpinion X-CUBE 60</figcaption></figure>
+        <figure><img src="img/usg-doppler.webp" alt="Obraz USG z dopplerem kolorowym" width="400" height="280" loading="lazy"><figcaption>Color Doppler</figcaption></figure>
         <figure><img src="img/usg-microview.webp" alt="Obraz USG w trybie MicroView" width="400" height="280" loading="lazy"><figcaption>MicroView</figcaption></figure>
-        <figure><img src="img/usg-elastografia.webp" alt="Obraz USG tkanek miękkich" width="400" height="280" loading="lazy"><figcaption>Obrazowanie tkanek miękkich</figcaption></figure>
-        <figure><img src="img/usg-ceus.webp" alt="Porównanie obrazów USG" width="400" height="280" loading="lazy"><figcaption>Wysoka rozdzielczość obrazu</figcaption></figure>
+        <figure><img src="img/usg-elastografia.webp" alt="Obraz USG tkanek miękkich" width="400" height="280" loading="lazy"><figcaption>Tkanki miękkie</figcaption></figure>
+        <figure><img src="img/usg-ceus.webp" alt="Porównanie obrazów USG w wysokiej rozdzielczości" width="400" height="280" loading="lazy"><figcaption>Wysoka rozdzielczość obrazu</figcaption></figure>
       </div>
       <div class="karuzela-ster">
         <button class="k-prev" aria-label="Poprzednie zdjęcie">&#8592;</button>
@@ -141,97 +239,110 @@
   </div>
 </section>
 
-<section class="sekcja zabiegi" id="zabiegi" aria-labelledby="h-zab">
-  <div class="wrap">
-    <div class="sekcja-glowa">
-      <h2 id="h-zab">Zabiegi i pracownie</h2>
-      <p>Badania i zabiegi, które wykonujemy na miejscu w Ostmedice.</p>
-    </div>
-  </div>
-  <div class="karty-tor-wrap">
-    <div class="karty-tor" data-tor tabindex="0" aria-label="Zabiegi i pracownie, przesuń w bok">
-      <article class="karta">
-        <div class="karta-foto"><img src="img/sala-wnetrze.webp" alt="Nowa sala zabiegowa Ostmedica" width="734" height="605" loading="lazy"></div>
-        <div class="karta-tekst">
-          <h3>Zabiegi ręki w znieczuleniu miejscowym</h3>
-          <p>Metoda WALANT: zespół cieśni nadgarstka, palce zatrzaskujące, przykurcz Dupuytrena. Także iniekcje PRP, kwas hialuronowy i zabiegi pod kontrolą USG.</p>
-          <p class="karta-kto">lek. Łukasz Cieślak, ortopedia i traumatologia narządu ruchu</p>
-        </div>
-      </article>
-      <article class="karta">
-        <div class="karta-foto karta-foto-jasne"><img src="img/kosc.webp" alt="Model kręgu kręgosłupa" width="403" height="334" loading="lazy"></div>
-        <div class="karta-tekst">
-          <h3>Kriolezja i leczenie bólu</h3>
-          <p>Zamrożenie nerwu pod stałą kontrolą USG znosi ból i pozwala wrócić do rehabilitacji. Kręgosłup, staw krzyżowo-biodrowy, kolano i bark.</p>
-          <p class="karta-kto">lek. Bartosz Czapski, neurochirurg; lek. Łukasz Cieślak</p>
-        </div>
-      </article>
-      <article class="karta">
-        <div class="karta-foto karta-foto-jasne"><img src="img/emg-keypoint.webp" alt="Aparat EMG Keypoint" width="360" height="360" loading="lazy"></div>
-        <div class="karta-tekst">
-          <h3>Pracownia EMG</h3>
-          <p>Badanie przewodzenia w nerwach obwodowych i czynności mięśni, m.in. zespół cieśni nadgarstka i nerw łokciowy. Badania EMG/NCS także u dzieci.</p>
-          <p class="karta-kto">lek. Milena Wyszczelska-Namięta; lek. Magdalena Ogrodnik</p>
-        </div>
-      </article>
-      <article class="karta">
-        <div class="karta-foto"><img src="img/wkladki-3d.webp" alt="Wkładki ortopedyczne 3D" width="595" height="842" loading="lazy" style="object-position:70% 88%"></div>
-        <div class="karta-tekst">
-          <h3>Wkładki 3D spersonalizowane</h3>
-          <p>Projektowane indywidualnie do stopy i obuwia, frezowane z pianki EVA w technologii CNC, z wierzchnią warstwą z alcantary.</p>
-          <p class="karta-kto">Na miejscu w Ostmedice</p>
-        </div>
-      </article>
-    </div>
-    <div class="wrap tor-ster">
-      <button class="t-prev" aria-label="Przewiń w lewo">&#8592;</button>
-      <button class="t-next" aria-label="Przewiń w prawo">&#8594;</button>
-    </div>
-  </div>
-</section>
-
-<section class="sekcja gabinety" id="gabinety" aria-labelledby="h-gab">
-  <div class="wrap">
-    <div class="sekcja-glowa">
-      <h2 id="h-gab">Gabinety i lekarze</h2>
-      <p>Od października przyjmują nowe gabinety: neurologii dziecięcej (lek. Magdalena Ogrodnik) i chirurgii naczyniowej (lek. Svitlana Korobova).</p>
-    </div>
-    <div class="katalog">
-      <div class="spec"><h3>Ortopedia</h3><ul><li>lek. Łukasz Cieślak</li><li>lek. Arkadiusz Garbacki</li><li>lek. Krzysztof Scharoch</li><li>lek. Krzysztof Skiba</li><li>lek. Martyna Budzińska</li></ul></div>
-      <div class="spec"><h3>Chirurgia ogólna i naczyniowa</h3><ul><li>dr n. med. Krzysztof Ostrowski</li><li>lek. Svitlana Korobova <em>nowy gabinet</em></li><li>lek. Henryk Mazgaj</li></ul></div>
-      <div class="spec"><h3>Osteoporoza i choroby kości</h3><ul><li>lek. Jacek Borowicz</li></ul></div>
-      <div class="spec"><h3>Endokrynologia</h3><ul><li>lek. Beata Woźniak</li></ul></div>
-      <div class="spec"><h3>Diabetologia</h3><ul><li>lek. Edyta Jabłońska-Wypustek</li></ul></div>
-      <div class="spec"><h3>Neurologia</h3><ul><li>lek. Aleksandra Dumowska-Tucholska</li><li>lek. Milena Wyszczelska-Namięta (EMG)</li></ul></div>
-      <div class="spec"><h3>Neurologia dziecięca</h3><ul><li>lek. Magdalena Ogrodnik <em>nowy gabinet</em></li></ul></div>
-      <div class="spec"><h3>Neurochirurgia i leczenie bólu</h3><ul><li>lek. Bartosz Czapski</li></ul></div>
-      <div class="spec"><h3>Pediatria</h3><ul><li>lek. Sławomir Konstantynowicz</li><li>lek. Agnieszka Olszewska</li></ul></div>
-      <div class="spec"><h3>Dermatologia</h3><ul><li>lek. Justyna Śliwiak-Chmura</li><li>lek. Łukasz Pacek</li></ul></div>
-      <div class="spec"><h3>Urologia</h3><ul><li>lek. Zuzanna Nerkowska</li><li>lek. Bartłomiej Domagała</li></ul></div>
-      <div class="spec"><h3>Laryngologia</h3><ul><li>dr n. med. Rafał Brzeziński</li></ul></div>
-      <div class="spec"><h3>Nefrologia</h3><ul><li>lek. Marcin Czystowski</li></ul></div>
-      <div class="spec"><h3>Radiologia, USG</h3><ul><li>lek. Patryk Krokwiński</li></ul></div>
-      <div class="spec"><h3>Medycyna estetyczna</h3><ul><li>dr n. med. Krzysztof Ostrowski</li></ul></div>
-      <div class="spec"><h3>Fizjoterapia</h3><ul><li>mgr Magdalena Szewczyk</li></ul></div>
-    </div>
-    <p class="katalog-uwaga">Każdy gabinet ma w docelowej stronie własną podstronę: zakres leczenia, doświadczenie lekarza i cennik.</p>
-  </div>
-</section>
-
-<section class="sekcja fizjo" id="fizjoterapia" aria-labelledby="h-fizjo">
-  <div class="wrap fizjo-siatka">
-    <figure class="fizjo-foto"><img src="img/fizjoterapia.webp" alt="Fizjoterapeuta podczas terapii kręgosłupa" width="750" height="500" loading="lazy"></figure>
+<!-- 5. EMG -->
+<section class="sekcja emg" id="emg" aria-labelledby="h-emg">
+  <div class="wrap emg-siatka">
+    <figure class="emg-foto"><img src="img/emg-keypoint.webp" alt="Aparat do badań EMG w pracowni elektrofizjologii Ostmedica" width="360" height="360" loading="lazy"></figure>
     <div>
-      <h2 id="h-fizjo">Fizjoterapia</h2>
-      <p>Fizjoterapia pomaga wrócić do sprawności ruchowej po urazach, operacjach i chorobach układu nerwowego. Prowadzi ją mgr fizjoterapii Magdalena Szewczyk.</p>
-      <div class="fizjo-listy">
-        <div><h3>Schorzenia ortopedyczne</h3><ul class="lista-kosc"><li>bóle kręgosłupa szyjnego, piersiowego i lędźwiowego</li><li>stany po złamaniach i skręceniach</li><li>po endoprotezie biodra i kolana, rekonstrukcji ACL i PCL</li><li>wady postawy, skoliozy</li></ul></div>
-        <div><h3>Schorzenia neurologiczne</h3><ul class="lista-kosc"><li>udar mózgu</li><li>uraz rdzenia</li><li>stany po urazach czaszkowo-mózgowych</li><li>schorzenia nerwów obwodowych</li></ul></div>
+      <h2 id="h-emg">EMG - pracownia elektrofizjologii</h2>
+      <p class="duzy">Elektromiografia ocenia przewodzenie w nerwach obwodowych i czynność mięśni. To rutynowe, małoinwazyjne badanie, które pokazuje rodzaj, miejsce i stopień uszkodzenia nerwu lub mięśnia.</p>
+      <ul class="lista-kosc">
+        <li>zespół cieśni nadgarstka, ucisk nerwu łokciowego</li>
+        <li>drętwienie, mrowienie i osłabienie rąk lub nóg</li>
+        <li>uszkodzenia nerwów obwodowych po urazach</li>
+        <li>badania EMG/NCS u dzieci</li>
+      </ul>
+      <div class="emg-lekarze">
+        <p><b>lek. Milena Wyszczelska-Namięta</b><span>neurologia, EMG dorosłych</span></p>
+        <p><b>lek. Magdalena Ogrodnik</b><span>neurologia dziecięca, EMG/NCS dzieci</span></p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- 6. ZABIEGI -->
+<section class="sekcja zabiegi" id="zabiegi" aria-labelledby="h-zab">
+  <div class="wrap">
+    <div class="sekcja-glowa">
+      <h2 id="h-zab">Zabiegi</h2>
+      <p>Zabiegi w znieczuleniu miejscowym w nowej sali chirurgicznej i w gabinetach zabiegowych Ostmedica.</p>
+    </div>
+    <div class="zabiegi-siatka">
+      <article class="zabieg">
+        <div class="zabieg-foto karuzela" data-karuzela data-male aria-roledescription="karuzela" aria-label="Zabiegi ortopedyczne ręki, zdjęcia">
+          <div class="karuzela-tor ciemne" tabindex="0">
+            <figure><img src="img/rtg-ciesn.webp" alt="Zdjęcie rentgenowskie dłoni, zespół cieśni nadgarstka" width="261" height="336" loading="lazy"><figcaption>Zespół cieśni nadgarstka</figcaption></figure>
+            <figure><img src="img/rtg-palce.webp" alt="Zdjęcie rentgenowskie, palce zatrzaskujące" width="261" height="336" loading="lazy"><figcaption>Palce zatrzaskujące</figcaption></figure>
+            <figure><img src="img/rtg-dupuytren.webp" alt="Zdjęcie rentgenowskie dłoni, przykurcz Dupuytrena" width="261" height="336" loading="lazy"><figcaption>Przykurcz Dupuytrena</figcaption></figure>
+            <figure><img src="img/rtg-lokiec.webp" alt="Zdjęcie rentgenowskie łokcia, uwolnienie nerwu łokciowego" width="261" height="336" loading="lazy"><figcaption>Uwolnienie nerwu łokciowego</figcaption></figure>
+          </div>
+          <div class="karuzela-ster"><button class="k-prev" aria-label="Poprzednie zdjęcie">&#8592;</button><span class="k-licznik">1 / 4</span><button class="k-next" aria-label="Następne zdjęcie">&#8594;</button></div>
+        </div>
+        <div class="zabieg-tekst">
+          <h3>Zabiegi ortopedyczne</h3>
+          <p>Operacje ręki w znieczuleniu miejscowym: zespół cieśni nadgarstka, palce zatrzaskujące, przykurcz Dupuytrena, uwolnienie nerwu łokciowego. Także iniekcje PRP i kwasu hialuronowego pod kontrolą USG.</p>
+          <p class="zabieg-kto">lek. Łukasz Cieślak, ortopedia i traumatologia narządu ruchu</p>
+        </div>
+      </article>
+
+      <article class="zabieg">
+        <div class="zabieg-foto"><img src="img/sala-naczyniowa.webp" alt="Sala zabiegowa chirurgii ogólnej i naczyniowej Ostmedica" width="1254" height="416" loading="lazy" style="object-position:38% 50%"></div>
+        <div class="zabieg-tekst">
+          <h3>Zabiegi naczyniowe</h3>
+          <p>Małoinwazyjne leczenie żylaków: skleroterapia i miniflebektomia, USG doppler naczyń obwodowych oraz drobne zabiegi chirurgiczne. Leczenie ran przewlekłych, także przy stopie cukrzycowej.</p>
+          <p class="zabieg-kto">lek. Svitlana Korobova; dr n. med. Krzysztof Ostrowski</p>
+        </div>
+      </article>
+
+      <article class="zabieg">
+        <div class="zabieg-foto karuzela" data-karuzela data-male aria-roledescription="karuzela" aria-label="Poradnia leczenia bólu, zdjęcia">
+          <div class="karuzela-tor" tabindex="0">
+            <figure><img src="img/sala-bol.webp" alt="Sala zabiegowa poradni leczenia bólu" width="563" height="584" loading="lazy" style="object-position:50% 70%"><figcaption>Sala zabiegowa</figcaption></figure>
+            <figure class="na-bieli"><img src="img/kosc.webp" alt="Model kręgu kręgosłupa" width="403" height="334" loading="lazy"><figcaption>Kriolezja kręgosłupa</figcaption></figure>
+          </div>
+          <div class="karuzela-ster"><button class="k-prev" aria-label="Poprzednie zdjęcie">&#8592;</button><span class="k-licznik">1 / 2</span><button class="k-next" aria-label="Następne zdjęcie">&#8594;</button></div>
+        </div>
+        <div class="zabieg-tekst">
+          <h3>Poradnia leczenia bólu: kriolezja</h3>
+          <p>Kriolezja kręgosłupa pod kontrolą USG, blokady kręgosłupa, leczenie chorób nerwów obwodowych i zespołów bólowych twarzy i głowy.</p>
+          <p class="zabieg-kto">lek. Bartosz Czapski, neurochirurg, specjalista interwencyjnego leczenia bólu (CIPS, EDPM)</p>
+        </div>
+      </article>
+
+      <article class="zabieg">
+        <div class="zabieg-foto na-bieli"><img src="img/kriochirurgia.webp" alt="Aparat do kriochirurgii CRYO-S Classic" width="178" height="538" loading="lazy"></div>
+        <div class="zabieg-tekst">
+          <h3>Zabiegi dermatologiczne: kriochirurgia</h3>
+          <p>Wymrażanie zmian skórnych podtlenkiem azotu (aparat CRYO-S Classic), w większości przypadków bez znieczulenia: brodawki i kurzajki, włókniaki, niektóre znamiona i blizny, zmiany naczyniowe.</p>
+          <p class="zabieg-kto">lek. Justyna Śliwiak-Chmura; lek. Łukasz Pacek</p>
+        </div>
+      </article>
+
+      <article class="zabieg">
+        <div class="zabieg-foto zabieg-typo" aria-hidden="true">
+          <span class="typo-liczba">2,8 mm</span>
+          <span class="typo-opis">średnica fiberoskopu do badania nosa, gardła i krtani</span>
+        </div>
+        <div class="zabieg-tekst">
+          <h3>Chirurgia głowy i szyi</h3>
+          <p>Videofiberoskopia, także u dzieci. Operacje nosa i zatok, korekta przegrody nosa, usuwanie migdałków, zabiegi krtani i podniebienia przy chrapaniu.</p>
+          <p class="zabieg-kto">dr n. med. Rafał Brzeziński, otolaryngolog, chirurg głowy i szyi</p>
+        </div>
+      </article>
+
+      <article class="zabieg">
+        <div class="zabieg-foto"><img src="img/medycyna-estetyczna.webp" alt="Zabieg medycyny estetycznej, wypełnianie kwasem hialuronowym" width="706" height="721" loading="lazy" style="object-position:50% 40%"></div>
+        <div class="zabieg-tekst">
+          <h3>Medycyna estetyczna</h3>
+          <p>Kwas hialuronowy, toksyna botulinowa, nici rewitalizujące i liftingujące.</p>
+          <p class="zabieg-kto">dr n. med. Krzysztof Ostrowski</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 7. KONTAKT -->
 <section class="sekcja kontakt" id="kontakt" aria-labelledby="h-kontakt">
   <div class="wrap kontakt-siatka">
     <div class="kontakt-dane">
@@ -248,13 +359,16 @@
         <label>Imię i nazwisko<input name="imie" autocomplete="name" required></label>
         <label>Telefon<input name="tel" type="tel" autocomplete="tel" required></label>
         <label>Do jakiego lekarza lub na jakie badanie?<textarea name="wiad" rows="3"></textarea></label>
+        <label class="zgoda"><input type="checkbox" required> <span>Zgadzam się na kontakt w sprawie wizyty. Zasady przetwarzania danych: <a href="polityka-prywatnosci.html">polityka prywatności</a>.</span></label>
         <button class="btn btn-glowny" type="submit">Poproś o telefon z rejestracji</button>
-        <p class="form-info" role="status" hidden>To wizualizacja, formularz niczego nie wysyła. W docelowej stronie trafi do rejestracji.</p>
+        <p class="form-info" role="status" hidden>To podgląd, formularz niczego nie wysyła. W docelowej stronie wiadomość trafi na rejestracja@ostmedica.pl.</p>
       </form>
     </div>
     <div class="mapa">
-      <iframe title="Mapa dojazdu do Ostmedica w Płońsku" src="https://www.google.com/maps?q=Ostmedica,+ul.+Rutkowskiego+6,+09-100+P%C5%82o%C5%84sk&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <a class="link-strzalka" href="https://www.google.com/maps/dir/?api=1&destination=ul.+Rutkowskiego+6,+09-100+P%C5%82o%C5%84sk" target="_blank" rel="noopener">Wyznacz trasę</a>
+      <div class="mapa-ramka" id="mapa">
+        <iframe title="Mapa dojazdu do Ostmedica w Płońsku" src="https://www.google.com/maps?q=Ostmedica,+ul.+Rutkowskiego+6,+09-100+P%C5%82o%C5%84sk&amp;output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <a class="btn btn-obrys" href="https://www.google.com/maps/dir/?api=1&amp;destination=ul.+Rutkowskiego+6,+09-100+P%C5%82o%C5%84sk" target="_blank" rel="noopener">Wyznacz trasę w Mapach Google</a>
     </div>
   </div>
 </section>
@@ -264,20 +378,20 @@
   <div class="wrap stopka-siatka">
     <div class="stopka-firma">
       <b>OSTMEDICA</b>
-      <p>ul. Rutkowskiego 6<br>09-100 Płońsk</p>
+      <p>Densytometria na aparacie GE Lunar Prodigy, badania USG dzieci i dorosłych, zabiegi w znieczuleniu miejscowym i gabinety lekarzy kilkunastu specjalności pod jednym adresem.</p>
     </div>
     <div>
-      <p><a href="tel:+48731100801">731 100 801</a><br><a href="mailto:rejestracja@ostmedica.pl">rejestracja@ostmedica.pl</a></p>
+      <p>ul. Dr. L. Rutkowskiego 6<br>09-100 Płońsk<br><a href="tel:+48731100801">731 100 801</a><br><a href="mailto:rejestracja@ostmedica.pl">rejestracja@ostmedica.pl</a></p>
     </div>
-    <nav class="stopka-menu" aria-label="Stopka">
-      <a href="#densytometria">Densytometria</a><a href="#usg">USG</a><a href="#gabinety">Gabinety i lekarze</a><a href="#fizjoterapia">Fizjoterapia</a>
+    <nav class="stopka-menu" aria-label="Działy">
+      <a href="#poradnie">Poradnie i gabinety</a><a href="#fizjoterapia">Fizjoterapia</a><a href="#densytometria">Densytometria</a><a href="#usg">USG</a><a href="#emg">EMG</a><a href="#zabiegi">Zabiegi</a>
     </nav>
     <nav class="stopka-menu" aria-label="Informacje">
-      <a href="#kontakt">Kontakt</a><a href="#">Polityka prywatności</a><a href="#">Ustawienia cookies</a>
+      <a href="#kontakt">Kontakt</a><a href="polityka-prywatnosci.html">Polityka prywatności</a><a href="#" data-cookies-ustawienia>Ustawienia cookies</a>
     </nav>
   </div>
   <div class="wrap stopka-dol">
-    <span>&copy; 2026 OSTMEDICA Płońsk. Wizualizacja koncepcyjna strony głównej.</span>
+    <span>&copy; <span data-rok>2026</span> OSTMEDICA Płońsk</span>
 <style>
 .wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
 .wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
@@ -296,9 +410,25 @@
 
 <div class="pasek-mob" aria-hidden="true">
   <a class="btn btn-glowny" href="tel:+48731100801" tabindex="-1"><svg aria-hidden="true"><use href="#ikona-tel"/></svg>Zadzwoń</a>
-  <a class="btn btn-jasny" href="#gabinety" tabindex="-1">Gabinety i lekarze</a>
+  <a class="btn btn-jasny" href="#poradnie" tabindex="-1">Poradnie i lekarze</a>
 </div>
 
-<script src="app.js" defer></script>
+<div class="cookies" id="cookies" role="dialog" aria-modal="false" aria-labelledby="cookies-tytul" hidden>
+  <div class="cookies-in">
+    <p class="cookies-tytul" id="cookies-tytul">Pliki cookies i usługi zewnętrzne</p>
+    <p>Strona używa niezbędnych plików cookies. Mapa Google i czcionki Google mogą zapisywać własne pliki cookies. Szczegóły w <a href="polityka-prywatnosci.html#cookies">polityce prywatności</a>.</p>
+    <div class="cookies-opcje" id="cookies-opcje" hidden>
+      <label><input type="checkbox" checked disabled> Niezbędne (zawsze aktywne)</label>
+      <label><input type="checkbox" id="zgoda-zewn" checked> Usługi zewnętrzne: mapa Google</label>
+    </div>
+    <div class="cookies-przyciski">
+      <button class="btn btn-glowny" data-zgoda="wszystkie">Akceptuję wszystkie</button>
+      <button class="btn btn-obrys" data-zgoda="niezbedne">Tylko niezbędne</button>
+      <button class="cookies-link" data-zgoda="ustawienia" aria-expanded="false" aria-controls="cookies-opcje">Ustawienia</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js?v=2" defer></script>
 </body>
 </html>
