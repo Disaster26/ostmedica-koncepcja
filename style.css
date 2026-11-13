@@ -40,7 +40,7 @@ svg use{pointer-events:none}
 .pasek-tel b{font-family:var(--f-nag);font-weight:900;font-size:15px}
 .naglowek-in{height:var(--wiersz);display:flex;align-items:center;gap:24px}
 .logo{display:block;flex:none}
-.logo svg{height:34px;width:auto;display:block}
+.logo img{height:34px;width:auto;display:block}
 .menu{display:flex;gap:2px;margin-left:auto}
 .menu a{font-family:var(--f-nag);font-weight:800;font-size:15.5px;color:var(--tekst);text-decoration:none;padding:10px 10px;border-radius:8px;position:relative;white-space:nowrap}
 .menu a:hover{color:var(--granat);background:var(--tlo-jasne)}
@@ -65,10 +65,12 @@ svg use{pointer-events:none}
 .hero-tekst{grid-column:1;grid-row:1;display:flex;align-items:center;justify-content:flex-start;padding:48px 56px 48px max(20px,calc((100vw - 1240px) / 2));position:relative;z-index:2}
 .hero-in{width:min(610px,100%)}
 .hero-foto{grid-column:2;grid-row:1;margin:0;position:relative;background:#E9EDF2}
-.hero-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.hero-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:46% 55%}
 .hero-foto::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#fff 0,rgba(255,255,255,0) 18%)}
 .hero-foto figcaption{position:absolute;z-index:2;left:32px;bottom:28px;display:flex;align-items:center;gap:10px;font-family:var(--f-nag);font-weight:800;font-size:18px;color:#fff;background:var(--granat);padding:11px 18px 11px 14px;border-radius:8px;box-shadow:0 10px 30px rgba(31,47,107,.25)}
 .hero-foto figcaption svg{width:34px;height:11px;color:var(--pomarancz);flex:none}
+.hero-foto figcaption span{display:flex;flex-direction:column;line-height:1.2}
+.hero-foto figcaption small{font-family:var(--f-txt);font-weight:600;font-size:14px;color:#D3DAF0;margin-top:3px}
 .hero-adres{font-weight:700;color:var(--szary);margin-bottom:14px}
 .hero h1{font-size:clamp(36px,3.5vw,54px);font-weight:900;margin-bottom:20px}
 .lead{font-size:clamp(17px,1.3vw,20px);color:#3A4458;max-width:34em;margin-bottom:30px}
@@ -144,6 +146,7 @@ svg use{pointer-events:none}
 .usg-grupy div{border-top:2px solid var(--granat);padding-top:12px}
 .usg-grupy h3{font-size:17px;margin-bottom:4px}
 .usg-grupy p{margin:0;color:#3A4458;font-size:15.5px}
+.usg-grupy p.usg-kto{margin-top:8px;font-weight:700;color:var(--granat);font-size:15px}
 
 /* karuzele */
 .karuzela{position:relative;min-width:0}
@@ -176,8 +179,22 @@ svg use{pointer-events:none}
 .zabiegi{background:var(--tlo-jasne)}
 .zabiegi-siatka{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .zabieg{background:#fff;border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 var(--linia),0 10px 30px rgba(31,47,107,.06)}
-.zabieg-foto{aspect-ratio:16/11;overflow:hidden;background:#E9EDF2;position:relative;margin:0}
+.zabieg-foto{aspect-ratio:6/5;overflow:hidden;background:#E9EDF2;position:relative;margin:0}
 .zabieg-foto>img{width:100%;height:100%;object-fit:cover}
+.zabieg-foto.plakat{background:linear-gradient(var(--tlo-g,#fff),var(--tlo-d,#fff))}
+.zabieg-foto.plakat>img{object-fit:cover;object-position:50% 40%}
+.zabieg-foto.plakat.cala>img{object-fit:contain}
+.link-strzalka{font-weight:700;text-decoration:none;display:inline-flex;gap:6px;align-items:center}
+.link-strzalka::after{content:"↓";color:var(--pomarancz)}
+.link-strzalka:hover{text-decoration:underline}
+.derma{margin-top:28px;background:#fff;border-radius:var(--r);padding:40px 44px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:44px;box-shadow:0 1px 0 var(--linia),0 10px 30px rgba(31,47,107,.06);scroll-margin-top:calc(var(--naglowek) + 16px)}
+.derma h3{font-size:26px}
+.derma-tekst p{color:#3A4458}
+.derma-tekst .duzy{color:#2C3550}
+.derma-bok h4{font-size:18px;margin-bottom:12px}
+.derma-bok .lista-kosc li{font-size:16px}
+.derma-aparat{background:var(--tlo-jasne);border-radius:10px;padding:22px 22px 8px;border-top:3px solid var(--granat)}
+.derma-aparat p{font-size:15px;color:#3A4458;line-height:1.55}
 .zabieg-foto.karuzela{overflow:hidden}
 .zabieg-foto .karuzela-tor{height:100%;border-radius:0}
 .zabieg-foto .karuzela-tor figure{aspect-ratio:auto;height:100%}
@@ -225,7 +242,7 @@ svg use{pointer-events:none}
 .stopka a{color:#fff;text-decoration:none}
 .stopka a:hover{text-decoration:underline}
 .stopka-siatka{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:28px}
-.stopka-firma b{font-family:var(--f-nag);font-size:20px;color:#fff;letter-spacing:.02em}
+.stopka-logo{display:block;height:30px;width:auto}
 .stopka-firma p{margin:8px 0 0;max-width:30em}
 .stopka-menu{display:flex;flex-direction:column;gap:7px}
 .stopka-dol{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 20px;margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-size:14px}
@@ -240,6 +257,7 @@ svg use{pointer-events:none}
 .cookies-tytul{font-family:var(--f-nag);font-weight:900;color:var(--granat-ciemny);font-size:18px;margin:0 0 6px}
 .cookies p{font-size:14.5px;line-height:1.5;color:#3A4458;margin:0 0 12px}
 .cookies-opcje{display:grid;gap:8px;margin:0 0 14px;padding:12px 14px;background:var(--tlo-jasne);border-radius:10px;font-size:14.5px}
+.cookies-opcje[hidden]{display:none}
 .cookies-opcje label{display:flex;gap:8px;align-items:center}
 .cookies-opcje input{width:18px;height:18px;accent-color:var(--granat)}
 .cookies-przyciski{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center}
@@ -251,7 +269,7 @@ svg use{pointer-events:none}
   .menu a{padding:10px 8px;font-size:15px}
   .menu a.aktywny::after{left:8px;right:8px}
   .naglowek-in{gap:16px}
-  .logo svg{height:30px}
+  .logo img{height:30px}
   .zabiegi-fizjo{grid-template-columns:repeat(4,minmax(0,1fr))}
 }
 @media (max-width:1180px){
@@ -260,7 +278,7 @@ svg use{pointer-events:none}
   .menu{display:none}
   .tel-naglowek{display:inline-flex}
   .hamburger{display:flex}
-  .logo svg{height:34px}
+  .logo img{height:34px}
   .katalog{grid-template-columns:repeat(3,minmax(0,1fr))}
   .zabiegi-fizjo{grid-template-columns:repeat(3,minmax(0,1fr))}
   .specjalista{grid-template-columns:minmax(0,1fr);gap:24px}
@@ -272,6 +290,7 @@ svg use{pointer-events:none}
 }
 @media (max-width:1040px){
   .zabiegi-siatka{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .derma{grid-template-columns:minmax(0,1fr);gap:24px;padding:32px 30px}
 }
 @media (max-width:960px){
   .densy-siatka,.usg-siatka,.kontakt-siatka,.fizjo-gora,.emg-siatka{grid-template-columns:minmax(0,1fr);gap:40px}
@@ -285,7 +304,7 @@ svg use{pointer-events:none}
   :root{--wiersz:60px}
   body{font-size:16px}
   .wrap{width:calc(100% - 32px)}
-  .logo svg{height:28px}
+  .logo img{height:28px}
   .tel-naglowek{padding:0;width:44px;height:44px;justify-content:center}
   .tel-naglowek span{display:none}
   .naglowek-in{gap:8px}
@@ -293,10 +312,11 @@ svg use{pointer-events:none}
 
   .hero{display:flex;flex-direction:column;min-height:calc(100svh - var(--naglowek))}
   .hero-foto{flex:1 1 0;min-height:min(58vw,30svh);align-self:stretch;width:100%}
-  .hero-foto img{object-position:58% 30%}
+  .hero-foto img{object-position:50% 62%}
   .hero-foto::before{background:linear-gradient(0deg,#fff 0,rgba(255,255,255,0) 18%)}
   .hero-foto figcaption{left:16px;bottom:22px;font-size:15px;padding:8px 13px 8px 11px;gap:8px}
   .hero-foto figcaption svg{width:26px;height:9px}
+  .hero-foto figcaption small{font-size:12.5px;margin-top:2px}
   .hero-tekst{flex:0 0 auto;padding:8px 16px calc(20px + env(safe-area-inset-bottom));justify-content:flex-start}
   .hero-adres{font-size:14px;margin-bottom:6px}
   .hero h1{font-size:clamp(25px,min(7.2vw,4.3svh),34px);margin-bottom:10px}
@@ -312,10 +332,12 @@ svg use{pointer-events:none}
   .cennik li{font-size:15.5px}
   .densy-kosc{width:380px;height:120px;right:-140px;top:20px}
   .usg-grupy{grid-template-columns:minmax(0,1fr);gap:16px}
-  .katalog{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 18px}
+  .katalog{grid-template-columns:minmax(0,1fr);gap:0}
+  .spec{padding:12px 0 10px}
+  .spec h3{margin-bottom:3px}
   .spec h3{font-size:15.5px}
   .spec li{font-size:14.5px}
-  .spec em{display:block;margin:0}
+  .spec em{margin-left:6px}
   .fizjo-podtytul{margin-top:52px}
   .zabiegi-fizjo{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:12px;margin-inline:-16px;padding:0 16px 4px;scroll-padding-inline:16px}
   .zabiegi-fizjo::-webkit-scrollbar{display:none}
@@ -325,6 +347,8 @@ svg use{pointer-events:none}
   .emg-lekarze{grid-template-columns:minmax(0,1fr)}
   .emg-foto{padding:24px}
   .zabiegi-siatka{grid-template-columns:minmax(0,1fr);gap:18px}
+  .derma{padding:24px 18px;margin-top:18px}
+  .derma h3{font-size:23px}
   .typo-liczba{font-size:56px}
   .mapa{min-height:360px}
   .mapa-ramka{min-height:320px}
@@ -336,6 +360,7 @@ svg use{pointer-events:none}
 
   .stopka{padding-bottom:96px}
   .stopka-siatka{gap:22px 16px}
+  .stopka-siatka>div:nth-child(2){grid-column:1/-1}
   .pasek-mob{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--linia);transform:translateY(110%);transition:transform .25s ease-out}
   .pasek-mob .btn{min-height:48px;padding:0 12px;font-size:16px}
   .pasek-mob.widac{transform:none}
