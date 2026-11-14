@@ -13,19 +13,7 @@
   document.addEventListener('keydown',function(e){if(e.key==='Escape')zamknij();});
   window.addEventListener('resize',function(){if(window.innerWidth>1180)zamknij();});
 
-  // aktywna pozycja menu (dokladnie biezacy dzial)
-  var linki=[].slice.call(document.querySelectorAll('.menu a'));
-  var linkiPanel=[].slice.call(panel.querySelectorAll('nav a:not(.pod)'));
-  var sekcje=linki.map(function(a){return document.querySelector(a.getAttribute('href'));});
-  function aktywny(){
-    var y=window.scrollY+window.innerHeight*0.35, akt=-1;
-    sekcje.forEach(function(s,i){if(s&&s.getBoundingClientRect().top+window.scrollY<=y)akt=i;});
-    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4)akt=sekcje.length-1;
-    [linki,linkiPanel].forEach(function(lista){
-      lista.forEach(function(a,i){a.classList.toggle('aktywny',i===akt);if(i===akt)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
-    });
-  }
-  window.addEventListener('scroll',aktywny,{passive:true});aktywny();
+  // aktywna pozycja menu: ustawiona w HTML (aria-current="page") na kazdej podstronie
 
   // pasek dolny na telefonie po przewinieciu za przycisk hero
   var pasek=document.querySelector('.pasek-mob'), akcje=document.getElementById('hero-akcje');
@@ -36,6 +24,12 @@
       pasek.setAttribute('aria-hidden',widac?'false':'true');
       pasek.querySelectorAll('a').forEach(function(a){a.tabIndex=widac?0:-1;});
     }).observe(akcje);
+  }else if(pasek){
+    // podstrony bez hero: pasek po lekkim przewinieciu
+    var pokazPasek=function(){var widac=window.scrollY>240;pasek.classList.toggle('widac',widac);
+      pasek.setAttribute('aria-hidden',widac?'false':'true');
+      pasek.querySelectorAll('a').forEach(function(a){a.tabIndex=widac?0:-1;});};
+    window.addEventListener('scroll',pokazPasek,{passive:true});pokazPasek();
   }
 
   // przeciaganie mysza (palec dziala natywnie)

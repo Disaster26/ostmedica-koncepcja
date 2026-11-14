@@ -216,7 +216,7 @@ svg use{pointer-events:none}
 
 /* kriochirurgia dermatologiczna */
 .spec-link{display:inline-block;margin-top:6px;font-size:14.5px;font-weight:700;text-decoration:none;color:var(--pomarancz-ciemny)}
-.spec-link::after{content:" 93"}
+.spec-link::after{content:" →"}
 .spec-link:hover{text-decoration:underline}
 .panel nav a.pod{font-size:16.5px;font-weight:700;color:var(--granat);padding:10px 0 10px 18px;position:relative}
 .panel nav a.pod::before{content:"";position:absolute;left:2px;top:50%;width:9px;height:2px;background:var(--pomarancz)}
@@ -448,3 +448,35 @@ svg use{pointer-events:none}
 .emg-aparat{margin:22px 0 4px;padding:16px 18px;border-left:3px solid var(--granat);background:var(--tlo-jasne);border-radius:8px}
 .emg-aparat h3{margin:0 0 6px;font-size:18px;color:var(--granat-ciemny)}
 .emg-aparat p{margin:0}
+
+/* podstrony (14.11) */
+h1.jak-h2{font-size:clamp(28px,3.2vw,42px);font-weight:900}
+.densy h1{color:#fff}
+.okruszki{margin:-60px 0 36px;font-size:14.5px;color:var(--szary)}
+.okruszki ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 0}
+.okruszki li{display:inline-flex;align-items:center;min-width:0}
+.okruszki li+li::before{content:"/";margin:0 9px;color:#9AA5BA}
+.okruszki a{color:var(--granat);text-decoration:none;font-weight:600}
+.okruszki a:hover{text-decoration:underline}
+.okruszki [aria-current]{color:var(--szary)}
+.densy .okruszki,.densy .okruszki [aria-current]{color:#C9D3EE}
+.densy .okruszki a{color:#fff}
+.densy .okruszki li+li::before{color:#8E9BCB}
+.densy .wrap:first-of-type{position:relative}
+.wiecej{margin-top:28px}
+.link-strzalka.dalej::after{content:"→"}
+.poradnia-uklad{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px;align-items:start}
+.poradnia-uklad-waski{grid-template-columns:minmax(0,1fr);max-width:560px;margin-bottom:28px}
+.poradnia-karta .zabieg{height:100%}
+.poradnia-lekarze{background:#fff;border-radius:var(--r);padding:22px 24px 24px;box-shadow:0 1px 0 var(--linia),0 10px 30px rgba(31,47,107,.06);border-top:3px solid var(--granat)}
+.poradnia-lekarze h2{font-size:20px;margin-bottom:10px}
+.poradnia-lekarze ul{list-style:none;padding:0;margin:0 0 20px}
+.poradnia-lekarze li{padding:8px 0;border-bottom:1px solid var(--linia);color:#3A4458;font-weight:600}
+.poradnia-lekarze em{font-style:normal;font-size:12.5px;font-weight:700;color:var(--pomarancz-ciemny);margin-left:6px;white-space:nowrap}
+.poradnia .krio{margin-top:0}
+@media (max-width:960px){.poradnia-uklad{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){
+  h1.jak-h2{font-size:clamp(26px,7.4vw,32px)}
+  .okruszki{margin:-40px 0 24px;font-size:14px}
+  .wiecej .btn{width:100%}
+}
