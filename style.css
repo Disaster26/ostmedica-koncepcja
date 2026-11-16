@@ -529,3 +529,6 @@ h1.jak-h2{font-size:clamp(28px,3.2vw,42px);font-weight:900}
 @media (min-width:768px) and (max-width:1180px){.hero-foto figcaption{left:24px;right:24px;bottom:24px;font-size:16px}.aed-plakietka{right:24px;top:24px}}
 /* telefon: wyzsze zdjecie bez bialej poswiaty, tekst pod zdjeciem (16.11.2026) */
 @media (max-width:767px){.hero{min-height:0}.hero-foto{flex:none;height:60svh;min-height:340px;max-height:none}.hero-foto::before{display:none}.hero-foto figcaption{bottom:16px}.aed-plakietka{top:16px}.hero-tekst{padding-top:18px}}
+/* telefon: caly pierwszy ekran ze zdjeciem, opisem i przyciskiem (16.11.2026) */
+@media (max-width:767px){.hero-foto{height:clamp(190px,38svh,330px);min-height:0}.hero-tekst{padding-top:12px}.hero-adres{margin-bottom:4px;font-size:13.5px}.hero h1{font-size:clamp(25px,7.4vw,30px);line-height:1.15;margin-bottom:8px}.hero-tekst p{font-size:16px;line-height:1.5;margin-bottom:12px}.hero-akcje .btn{min-height:48px}}
+@media (max-width:767px){.hero-foto{height:clamp(160px,calc(100svh - 420px),330px)}}@media (max-width:380px){.hero-tekst p{font-size:15px}}
