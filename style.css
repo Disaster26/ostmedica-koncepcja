@@ -515,3 +515,4 @@ h1.jak-h2{font-size:clamp(28px,3.2vw,42px);font-weight:900}
   .lekarz-glowa h1{padding-right:60px}
   .lekarz-kosc{width:80px;height:26px}
 }
+.formularz label small{font-weight:400;color:var(--szary);font-size:13.5px}
