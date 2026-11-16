@@ -160,6 +160,8 @@ svg use{pointer-events:none}
 .karuzela-tor figure.na-tle-usg{background:#D9E3EB}
 .karuzela-tor figure.na-tle-usg img{object-fit:contain}
 .karuzela-tor figure.na-bieli img,.zabieg-foto.na-bieli>img{object-fit:contain;padding:16px}
+.karuzela-tor figure.na-jasnym{background:#ECEBE8}
+.karuzela-tor figure.na-jasnym img{object-fit:contain}
 .karuzela-tor figcaption{position:absolute;left:12px;bottom:12px;max-width:calc(100% - 24px);background:rgba(255,255,255,.94);color:var(--granat-ciemny);font-size:14px;font-weight:700;padding:5px 11px;border-radius:6px;line-height:1.35}
 .karuzela-ster{display:flex;align-items:center;justify-content:flex-end;gap:12px;margin-top:14px}
 .karuzela-ster button{width:46px;height:46px;border-radius:50%;border:2px solid var(--granat);background:#fff;color:var(--granat);font-size:20px;line-height:1}
