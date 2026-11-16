@@ -480,3 +480,36 @@ h1.jak-h2{font-size:clamp(28px,3.2vw,42px);font-weight:900}
   .okruszki{margin:-40px 0 24px;font-size:14px}
   .wiecej .btn{width:100%}
 }
+/* lekarze: linki na listach i podstrona lekarza */
+.lekarz-link{color:inherit;text-decoration:underline;text-decoration-color:rgba(238,128,35,.55);text-decoration-thickness:1.5px;text-underline-offset:3px}
+.lekarz-link:hover,.lekarz-link:focus-visible{color:var(--granat);text-decoration-color:var(--pomarancz)}
+.spec li .lekarz-link,.poradnia-lekarze li .lekarz-link{display:inline-block;padding:2px 0}
+.poradnia-lekarze li .lekarz-link{display:block;padding:0}
+.poradnia-lekarze li:has(.lekarz-link){display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.poradnia-lekarze li .lekarz-link::after{content:"→";color:var(--pomarancz);margin-left:6px;text-decoration:none;display:inline-block}
+.lekarz-strona{background:var(--tlo-jasne)}
+.lekarz-uklad{display:grid;grid-template-columns:minmax(0,1fr) 380px;grid-template-areas:"glowa cta" "tresc cta";gap:24px 40px;align-items:start}
+.lekarz-glowa{grid-area:glowa;position:relative;background:#fff;border-radius:var(--r);padding:30px 32px 26px;border-top:3px solid var(--granat);box-shadow:0 1px 0 var(--linia),0 10px 30px rgba(31,47,107,.06);overflow:hidden}
+.lekarz-glowa h1{margin:0 0 8px;padding-right:90px}
+.lekarz-kosc{position:absolute;right:-10px;top:18px;width:120px;height:38px;color:var(--pomarancz);opacity:.35}
+.lekarz-spec{margin:0;font-family:var(--f-nag);font-weight:800;font-size:19px;color:var(--granat)}
+.lekarz-poradnia{margin:6px 0 0;color:var(--szary);font-size:15.5px}
+.lekarz-cta{grid-area:cta;position:sticky;top:calc(var(--naglowek) + 20px);background:var(--granat);color:#fff;border-radius:var(--r);padding:24px}
+.lekarz-cta-tytul{margin:0 0 12px;font-family:var(--f-nag);font-weight:800;font-size:18px}
+.lekarz-cta p{margin:14px 0 0}
+.lekarz-cta .lekarz-cta-tytul{margin:0 0 12px}
+.lekarz-cta .btn{white-space:nowrap;padding:0 18px}
+.lekarz-cta .link-strzalka{color:#fff}
+.lekarz-tresc{grid-area:tresc;background:#fff;border-radius:var(--r);padding:28px 32px 18px;box-shadow:0 1px 0 var(--linia)}
+.lekarz-tresc h2{font-size:22px;margin:0 0 14px}
+.lekarz-tresc h2:not(:first-child){margin-top:30px}
+.lekarz-tresc p,.lekarz-tresc li{color:#2C3550}
+.lekarz-tresc ul:not(.lista-kosc){padding-left:20px}
+.lekarz-tresc ul:not(.lista-kosc) li{margin-bottom:.4em}
+@media (max-width:900px){
+  .lekarz-uklad{grid-template-columns:minmax(0,1fr);grid-template-areas:"glowa" "cta" "tresc";gap:16px}
+  .lekarz-cta{position:static}
+  .lekarz-glowa,.lekarz-tresc{padding:22px 20px}
+  .lekarz-glowa h1{padding-right:60px}
+  .lekarz-kosc{width:80px;height:26px}
+}
