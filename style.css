@@ -532,3 +532,5 @@ h1.jak-h2{font-size:clamp(28px,3.2vw,42px);font-weight:900}
 /* telefon: caly pierwszy ekran ze zdjeciem, opisem i przyciskiem (16.11.2026) */
 @media (max-width:767px){.hero-foto{height:clamp(190px,38svh,330px);min-height:0}.hero-tekst{padding-top:12px}.hero-adres{margin-bottom:4px;font-size:13.5px}.hero h1{font-size:clamp(25px,7.4vw,30px);line-height:1.15;margin-bottom:8px}.hero-tekst p{font-size:16px;line-height:1.5;margin-bottom:12px}.hero-akcje .btn{min-height:48px}}
 @media (max-width:767px){.hero-foto{height:clamp(160px,calc(100svh - 420px),330px)}}@media (max-width:380px){.hero-tekst p{font-size:15px}}
+/* telefon: hero wypelnia dokladnie ekran, zdjecie bierze wolna wysokosc (16.11.2026) */
+@media (max-width:767px){.hero{display:flex;flex-direction:column;height:auto;min-height:calc(100vh - var(--naglowek));min-height:calc(100svh - var(--naglowek))}.hero-foto{flex:1 1 auto;height:auto;min-height:160px;max-height:none}.hero-tekst{flex:0 0 auto;padding-bottom:22px}}
